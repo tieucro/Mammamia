@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                <title>OpenRoad</title>
         <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Macara do CPF-->
+       <script>
+           function mascara_cpf(){
+               var cpf = document.getElementById('cpf')
+               if(cpf.value.length == 3 || cpf.value.length == 7){
+                   cpf.value += "."
+               } else if(cpf.value.length == 11){
+                   cpf.value += "-"
+               }
+           }
+       </script>
     </head>
     <body background="https://www.alegrafoods.com.br/wp-content/uploads/2020/07/9-img-blog.png">
         <div id="layoutAuthentication">
@@ -34,8 +44,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="CPF">CPF</label>
-                                                <input class="form-control py-4" id="CPF" type="text" aria-describedby="cpfHelp" placeholder="Ensira seu CPF" autocomplete="off" maxlength="14" />
+                                                <label class="small mb-1" for="cpf">CPF</label>
+                                                <input class="form-control py-4" id="cpf" type="text" aria-describedby="cpfHelp" placeholder="Ensira seu CPF" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
