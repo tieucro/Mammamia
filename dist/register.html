@@ -17,6 +17,17 @@
                }
            }
        </script>
+        <!-- Macara do Cep-->
+       <script>
+           function mascara_cep(){
+               var cep = document.getElementById('cep')
+               if (cep.value.length == 5){
+               cep.value += "-"
+               }
+           }
+           </script>
+            
+        
     </head>
     <body background="https://www.alegrafoods.com.br/wp-content/uploads/2020/07/9-img-blog.png">
         <div id="layoutAuthentication">
@@ -45,8 +56,22 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="cpf">CPF</label>
-                                                <input class="form-control py-4" id="cpf" type="text" aria-describedby="cpfHelp" placeholder="Ensira seu CPF" autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
+                                                <input class="form-control py-4" id="cpf" type="text" aria-describedby="cpfHelp" placeholder="Ensira seu CPF" autocomplete="off" maxlength="9" onkeyup="mascara_cpf()" />
                                             </div>
+                                            <div class="col-md-6"></div>
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="endereco">Endereço</label>
+                                                        <input class="form-control py-4" id="endereco" type="text" aria-describedby="endereçoHelp" placeholder="Ensira seu Endereço"/>
+                                                    </div>
+                                                    <div class="col-md-6"></div>
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="cep">CEP</label>
+                                                        <input class="form-control py-4" id="cep" type="text" aria-describedby="cepHelp" placeholder="Ensira seu Endereço" maxlength="" onkeyup="mascara_cep()"/>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="small mb-1" for="numero">Numero</label>
+                                                        <input class="form-control py-4" id="numero" type="text" aria-describedby="endereçoHelp" placeholder="Ensira O numero da Residência"/>
+                                                    </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
                                                 <input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Ensira seu Email" />
@@ -83,7 +108,7 @@
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; Your Website 2021</div>
                             <div>
-                                <a href="#">Privacy Policy</a>
+                                <a href="#">Privacidade e Politica</a>
                                 &middot;
                                 <a href="#">Termos &amp; Condições</a>
                             </div>
