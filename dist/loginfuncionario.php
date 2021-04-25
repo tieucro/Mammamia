@@ -59,13 +59,13 @@
                                         </div>
                                         <div
                                             class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="password.html">Esqueceu a senha?</a>
-                                            <a class="btn btn-primary" href="index.html">Login</a>
+                                            <a class="small" href="password.php">Esqueceu a senha?</a>
+                                            <a class="btn btn-primary" href="index.php">Login</a>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <div class="small"><a href="registerfuncionario.html">Não possui conta? Registre-se!</a></div>
+                                    <div class="small"><a href="registerfuncionario.php">Não possui conta? Registre-se!</a></div>
                                 </div>
                             </div>
                         </div>

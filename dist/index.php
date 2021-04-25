@@ -18,7 +18,7 @@
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-danger">
-        <a class="navbar-brand" href="index.html">Mammamia</a>
+        <a class="navbar-brand" href="index.php">Mammamia</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#dc3545"><i
                 class="fas fa-bars"></i></button>
         <!-- Barra de Pesquisa-->
@@ -40,7 +40,7 @@
                     <a class="dropdown-item" href="#">Configuração</a>
                     <a class="dropdown-item" href="#">Registro de atividade</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="login.html">Logout</a>
+                    <a class="dropdown-item" href="login.php">Logout</a>
                 </div>
             </li>
         </ul>
@@ -51,7 +51,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Página</div>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="index.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-step-backward"></i></div>
                             Inicio
                         </a>

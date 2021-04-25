@@ -18,12 +18,17 @@
             }
         }
     </script>
-    <!-- Macara do Cep-->
+    <!-- Macara do Telefone-->
     <script>
-        function mascara_cep() {
-            var cep = document.getElementById('cep')
-            if (cep.value.length == 5) {
-                cep.value += "-"
+        function mascara_fone() {
+            var fone = document.getElementById('fone')
+            if (fone.value.length == 2) {
+                fone.value += " "
+            } else if (fone.value.length == 5) {
+                fone.value += " "
+            }
+            if (fone.value.length == 11) {
+                fone.value += "-"
             }
         }
     </script>
@@ -40,7 +45,7 @@
                         <div class="col-lg-7">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Cadastre-se</h3>
+                                    <h3 class="text-center font-weight-light my-4">Cadastro do Funcionário</h3>
                                 </div>
                                 <div class="card-body">
                                     <form>
@@ -63,58 +68,26 @@
                                         <div class="form-group">
                                             <label class="small mb-1" for="cpf">CPF</label>
                                             <input class="form-control py-4" id="cpf" type="text"
-                                                aria-describedby="cpfHelp" placeholder="Ensira seu CPF"
+                                                aria-describedby="cpfHelp" placeholder="Ensirir CPF"
                                                 autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
                                         </div>
-                                        <div class="col-md-6"></div>
                                         <div class="form-group">
-                                            <label class="small mb-1" for="endereco">Endereço</label>
-                                            <input class="form-control py-4" id="endereco" type="text"
-                                                aria-describedby="endereçoHelp" placeholder="Ensira seu Endereço" />
-                                        </div>
-                                        <div class="col-md-6"></div>
-                                        <div class="form-group">
-                                            <label class="small mb-1" for="bairro">Bairro</label>
-                                            <input class="form-control py-4" id="bairro" type="text"
-                                                aria-describedby="bairroHelp" placeholder="Ensira seu Bairro" />
-                                        </div>
-                                        <div class="col-md-6"></div>
-                                        <div class="form-group">
-                                            <label class="small mb-1" for="cep">CEP</label>
-                                            <input class="form-control py-4" id="cep" type="text"
-                                                aria-describedby="cepHelp" placeholder="Ensira seu Cep" maxlength="9"
-                                                onkeyup="mascara_cep()" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="small mb-1" for="numero">Numero</label>
-                                            <input class="form-control py-4" id="numero" type="text"
-                                                aria-describedby="endereçoHelp"
-                                                placeholder="Ensira o numero da residência" />
-                                        </div>
-                                        <div class="col-md-6"></div>
-                                        <div class="form-group">
-                                            <label class="small mb-1" for="estado">Estado</label>
-                                            <input class="form-control py-4" id="estado" type="text"
-                                                aria-describedby="estadoHelp" placeholder="Ensira seu Estado" /
-                                                maxlength="2">
-                                        </div>
-                                        <div class="col-md-6"></div>
-                                        <div class="form-group">
-                                            <label class="small mb-1" for="cidade">Cidade</label>
-                                            <input class="form-control py-4" id="cidade" type="text"
-                                                aria-describedby="cidadeHelp" placeholder="Ensira sua Cidade" />
+                                            <label class="small mb-1" for="fone">Telefone</label>
+                                            <input class="form-control py-4" id="fone" type="text"
+                                                aria-describedby="foneHelp" placeholder="Ensirir numero de celular"
+                                                autocomplete="off" maxlength="16" onkeyup="mascara_fone()" />
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputEmailAddress">Email</label>
                                             <input class="form-control py-4" id="inputEmailAddress" type="email"
-                                                aria-describedby="emailHelp" placeholder="Ensira seu Email" />
+                                                aria-describedby="emailHelp" placeholder="Ensirir Email" />
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="inputPassword">Senha</label>
                                                     <input class="form-control py-4" id="inputPassword" type="password"
-                                                        placeholder="Ensira sua Senha" />
+                                                        placeholder="Ensirir Senha" />
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -127,11 +100,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block"
-                                                href="login.html">Criar Conta</a></div>
+                                                href="login.php">Criar Conta</a></div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <div class="small"><a href="login.html">Já possui conta? Ir para login</a></div>
+                                    <div class="small"><a href="loginfuncionario.php">Já possui conta? Ir para
+                                            login</a></div>
                                 </div>
                             </div>
                         </div>
