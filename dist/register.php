@@ -43,20 +43,20 @@
                                     <h3 class="text-center font-weight-light my-4">Cadastre-se</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form method="POST">
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputFirstName">Nome</label>
-                                                    <input class="form-control py-4" id="inputFirstName" type="text"
-                                                        placeholder="Digite seu nome" />
+                                                    <label class="small mb-1" for="nome">Nome</label>
+                                                    <input class="form-control py-4" id="nome" type="text"
+                                                        placeholder="Digite seu nome" maxlength="20"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputLastName">Sobrenome</label>
-                                                    <input class="form-control py-4" id="inputLastName" type="text"
-                                                        placeholder="Digite seu sobrenome" />
+                                                    <label class="small mb-1" for="sobrenome">Sobrenome</label>
+                                                    <input class="form-control py-4" id="sobrenome" type="text"
+                                                        placeholder="Digite seu sobrenome" maxlength="20"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,13 +70,13 @@
                                         <div class="form-group">
                                             <label class="small mb-1" for="endereco">Endereço</label>
                                             <input class="form-control py-4" id="endereco" type="text"
-                                                aria-describedby="endereçoHelp" placeholder="Ensira seu Endereço" />
+                                                aria-describedby="endereçoHelp" placeholder="Ensira seu Endereço" maxlength="32"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="bairro">Bairro</label>
                                             <input class="form-control py-4" id="bairro" type="text"
-                                                aria-describedby="bairroHelp" placeholder="Ensira seu Bairro" />
+                                                aria-describedby="bairroHelp" placeholder="Ensira seu Bairro" maxlength="32"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
@@ -86,10 +86,10 @@
                                                 onkeyup="mascara_cep()" />
                                         </div>
                                         <div class="form-group">
-                                            <label class="small mb-1" for="numero">Numero</label>
+                                            <label class="small mb-1" for="numero">Numero da Residencia</label>
                                             <input class="form-control py-4" id="numero" type="text"
                                                 aria-describedby="endereçoHelp"
-                                                placeholder="Ensira o numero da residência" />
+                                                placeholder="Ensira o numero da residência" maxlength="8"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
@@ -102,27 +102,27 @@
                                         <div class="form-group">
                                             <label class="small mb-1" for="cidade">Cidade</label>
                                             <input class="form-control py-4" id="cidade" type="text"
-                                                aria-describedby="cidadeHelp" placeholder="Ensira sua Cidade" />
+                                                aria-describedby="cidadeHelp" placeholder="Ensira sua Cidade" maxlength="20"/>
                                         </div>
                                         <div class="form-group">
-                                            <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                            <input class="form-control py-4" id="inputEmailAddress" type="email"
-                                                aria-describedby="emailHelp" placeholder="Ensira seu Email" />
+                                            <label class="small mb-1" for="email">Email</label>
+                                            <input class="form-control py-4" id="email" type="email"
+                                                aria-describedby="emailHelp" placeholder="Ensira seu Email" maxlength="32"/>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputPassword">Senha</label>
-                                                    <input class="form-control py-4" id="inputPassword" type="password"
-                                                        placeholder="Ensira sua Senha" />
+                                                    <label class="small mb-1" for="senha">Senha</label>
+                                                    <input class="form-control py-4" id="senha" type="password"
+                                                        placeholder="Ensira sua Senha" maxlength="15"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputConfirmPassword">Confirme a
+                                                    <label class="small mb-1" for="confirmesenha">Confirme a
                                                         Senha</label>
-                                                    <input class="form-control py-4" id="inputConfirmPassword"
-                                                        type="password" placeholder="Confirme sua Senha" />
+                                                    <input class="form-control py-4" id="confirmesenha"
+                                                        type="password" placeholder="Confirme sua Senha" maxlength="15"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -130,6 +130,12 @@
                                                 href="login.php">Criar Conta</a></div>
                                     </form>
                                 </div>
+                                <?php
+                                
+                                
+                                
+                                
+                                ?>
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="login.php">Já possui conta? Ir para login</a></div>
                                 </div>
