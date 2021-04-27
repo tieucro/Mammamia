@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -131,10 +132,29 @@
                                     </form>
                                 </div>
                                 <?php
-                                
-                                
-                                
-                                
+                                //verificar se clicou no botao
+                                isset($_POST['nome']);
+                                {
+                                    $nome = addslashes($_POST['nome']);
+                                     $sobrenome  = addslashes($_POST['sobrenome']);
+                                     $cpf = addslashes($_POST['cpf']);
+                                      $endereco = addslashes($_POST['endereco']);
+                                       $bairro = addslashes($_POST['bairro']);
+                                        $cep = addslashes($_POST['cep']);
+                                         $numero = addslashes($_POST['numero']);
+                                          $estado = addslashes($_POST['estado']);
+                                           $cidade = addslashes($_POST['cidade']);
+                                            $email = addslashes($_POST['email']);
+                                             $senha = addslashes($_POST['senha']);
+                                              $confirmesenha = addslashes($_POST['confirmesenha']);
+                                    
+
+                                }
+                                {
+                                    $u->conectar("bd_mammamia","localhost","root","");
+                                }
+                                {
+                                }
                                 ?>
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="login.php">Já possui conta? Ir para login</a></div>

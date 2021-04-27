@@ -54,14 +54,14 @@
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="inputFirstName">Nome</label>
                                                     <input class="form-control py-4" id="inputFirstName" type="text"
-                                                        placeholder="Digite seu nome" />
+                                                        placeholder="Digite seu nome" maxlength="20"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="inputLastName">Sobrenome</label>
                                                     <input class="form-control py-4" id="inputLastName" type="text"
-                                                        placeholder="Digite seu sobrenome" />
+                                                        placeholder="Digite seu sobrenome" maxlength="20"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -80,14 +80,14 @@
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputEmailAddress">Email</label>
                                             <input class="form-control py-4" id="inputEmailAddress" type="email"
-                                                aria-describedby="emailHelp" placeholder="Ensirir Email" />
+                                                aria-describedby="emailHelp" placeholder="Ensirir Email" maxlength="32"/>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="inputPassword">Senha</label>
                                                     <input class="form-control py-4" id="inputPassword" type="password"
-                                                        placeholder="Ensirir Senha" />
+                                                        placeholder="Ensirir Senha" maxlength="15"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -95,7 +95,7 @@
                                                     <label class="small mb-1" for="inputConfirmPassword">Confirme a
                                                         Senha</label>
                                                     <input class="form-control py-4" id="inputConfirmPassword"
-                                                        type="password" placeholder="Confirme sua Senha" />
+                                                        type="password" placeholder="Confirme sua Senha" maxlength="15"/>
                                                 </div>
                                             </div>
                                         </div>
