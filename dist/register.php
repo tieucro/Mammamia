@@ -1,5 +1,8 @@
 
-<!DOCTYPE html>
+<?php
+ require_once 'Classes/usuarios.php';
+ $u = new Usuario;
+?>
 <html lang="pt-br">
 
 <head>
@@ -133,7 +136,7 @@
                                 </div>
                                 <?php
                                 //verificar se clicou no botao
-                                isset($_POST['nome']);
+                                isset($_POST['id']);
                                 {
                                     $nome = addslashes($_POST['nome']);
                                      $sobrenome  = addslashes($_POST['sobrenome']);
