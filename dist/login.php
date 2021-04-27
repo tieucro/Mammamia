@@ -19,14 +19,14 @@
                         
                     
                                     <div class="card-body">
-                                        <form method="POST" action="bdmammamia.php">
+                                        <form method="POST">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Digite seu Email" />
+                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Digite seu Email" maxlength="32"/>
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputPassword">Senha</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Digite sua Senha" />
+                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Digite sua Senha" maxlength="15"/>
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
