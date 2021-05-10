@@ -1,5 +1,11 @@
 <?php
 
+$hostname = "localhost";
+$db = "bd_mammamia";
+$username = 'root';
+$password = '';
+
+
 class  Usuario
 {
     private $pdo;
@@ -9,7 +15,7 @@ class  Usuario
 {
 global $pdo;
 try{
-$pdo = new PDO("mysql:dbid=".$nome.";host=".$host,$usuario,$senha);
+$pdo = new PDO("mysql:dbname=".$nome.";host=".$host,$usuario,$senha);
 }catch (PDOException $e){
     $msgErro = getMessage();
 }

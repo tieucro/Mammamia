@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('Classes/conexao.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -49,6 +55,7 @@
                     </div>
                 </main>
             </div>
+
             <div id="layoutAuthentication_footer">
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">

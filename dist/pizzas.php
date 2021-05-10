@@ -51,6 +51,7 @@
             <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i></a>
                 </li>
         </ul>
+
     </nav>
     <!-- Menu -->
     <div id="layoutSidenav">
@@ -86,11 +87,29 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4">Bem-Vindo(a)</h1>
+                    <h1 class="mt-4">Pizzas</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
-                   
+                    <!-- Produtos-->
+                    <img class="product-image-photo" src="pizzas/fran.jpg" width="20%" height="210"
+                        alt="Pizza de Frango com Catupiry">
+
+                    <div class="product details product-item-details">
+                        <strong class="product name product-item-name">
+                            <a>
+                                PIZZA DE FRANGO COM CATUPIRY TAMANHOS P|M|G </a>
+                        </strong>
+                        <div>
+                            <span class="price-dinheiro">
+                                <span>Pizza Tamanho G R$25,00</span>
+                            </span>
+                        </div>
+                        <button type="submit" title="Colocar no Carrinho" class="action tocart bt-list-product">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            Comprar </button>
+                        </form>
+                    </div>
                 </div>
         </div>
     </div>
