@@ -1,8 +1,9 @@
 
+
 <?php
 session_start();
-include('Classes/conexao.php');
-
+require_once 'Classes/conexao.php';
+$u = new Usuario;
 ?>
 <html lang="pt-br">
 
@@ -131,11 +132,42 @@ include('Classes/conexao.php');
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block"
+                                        <div class="form-group mt-4 mb-0" input type="submit"><a class="btn btn-primary btn-block"
                                                 href="login.php">Criar Conta</a></div>
                                     </form>
                                 </div>
+                                <?php
+                                if(isset($_POST['nome']))
+                                {
+                                    $nome = addcslashes($_POST['nome']);
+                                    $sobrenome = addcslashes($_POST['sobrenome']);
+                                    $cpf = addcslashes($_POST['cpf']);
+                                    $endereco = addcslashes($_POST['endereco']);
+                                    $bairro = addcslashes($_POST['bairro']);
+                                    $cep = addcslashes($_POST['cep']);
+                                    $numero = addcslashes($_POST['numero']);
+                                    $estado = addcslashes($_POST['estado']);
+                                    $cidade = addcslashes($_POST['cidade']);
+                                    $email = addcslashes($_POST['email']);
+                                    $senha = addcslashes($_POST['senha']);
+                                    $confirmesenha = addcslashes($_POST['confirmesenha']);
+                                    //verifica se esta preenchido
+                                    if(!empty($nome) && !empty($sobrenome) && !empty($cpf) && !empty($endereco) && !empty($bairro) && !empty($cep) && !empty($numero) && !empty($estado) && !empty($cidade) && !empty($email) && !empty($senha)  && !empty($confirmesenha))
+
+                                {
+                                    $u->conectar("bd_mammamia","localhost","root","admin");
+                                    if($u->msgErro == "")//se esta tudo ok
+                                {}
+                            }
+                            echo "Erro".$u->msgErro;
+                                 {
+                                     $u->register($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha, $confirmesenha);
+                                 }
+                                }
                                 
+
+                                
+                                ?>
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="login.php">Já possui conta? Ir para login</a></div>
                                 </div>
