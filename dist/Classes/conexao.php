@@ -35,7 +35,23 @@ $pdo = new PDO("mysql:dbname=".$nome.";host=".$host,$usuario,$senha);
 }
 
 function cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha)
-
+//caso nao cadastrar
+{
+$sql = $pdo->prepare("INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)");
+$sql->bindValue(":n",$nome);
+$sql->bindValue(":sb",$sobrenome);
+$sql->bindValue(":c",$cpf);
+$sql->bindValue(":en",$endereco);
+$sql->bindValue(":b",$bairro);
+$sql->bindValue(":ce",$cep);
+$sql->bindValue(":n",$numero);
+$sql->bindValue(":ed",$estado);
+$sql->bindValue(":cd",$cidade);
+$sql->bindValue(":e",$email);
+$sql->bindValue(":s",md5($senha));
+$sql->execute();
+return true;
+}
 {
   global $pdo;
   //verificar se já existe email cadastrado

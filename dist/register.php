@@ -161,7 +161,11 @@ $u = new Usuario;
                             }
                             echo "Erro".$u->msgErro;
                                  {
-                                     $u->register($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha, $confirmesenha);
+                                     if($senha == $confirmesenha)
+                                     {
+                                     
+                                     }
+                                     $u->cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha, $confirmesenha);
                                  }
                                 }
                                 

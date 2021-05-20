@@ -34,7 +34,7 @@ include('Classes/conexao.php');
                     unset($_SESSION['nao_autenticado']);
                     ?>
                                     <div class="card-body">
-                                        <form method="POST">
+                                        <form  action="login.php" method="POST">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Email</label>
                                                 <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Digite seu Email" maxlength="32"/>
