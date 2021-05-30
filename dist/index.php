@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('Classes/conexao.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-Br">
 

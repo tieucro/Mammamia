@@ -108,7 +108,7 @@
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
                     <!-- Products View -->
-    <scripts id="products-template" type="x-template">
+    <script id="products-template" type="x-template">
         <div class="column">
             <div class="mammamiaCart_shelfItem">
                 <img src="" class="item_thumb"/>
@@ -124,10 +124,10 @@
 
             </div>
         </div>
-    </scripts>
+    </script>
 
     <!-- Product Detail View -->
-    <scripts id="product-detail-template" type="x-template">
+    <script id="product-detail-template" type="x-template">
         <div class="mammamiaCart_shelfItem mammamiaStore_detailView">
             <a href="#" class="close view_close">&times;</a>
 
@@ -150,23 +150,23 @@
                 </div>
             </div>
         </div>
-    </scripts>
+    </script>
 
      <!-- Error View -->
-     <scripts id="error-template" type="x-template">
+     <script id="error-template" type="x-template">
         <div class="error">
             <b>Desculpe, algo deu errado:(</b>
 			<p class="error_text"></p>
 			<a href="#" class="close alert_close">&times;</a>
         </div>
-    </scripts>
+    </script>
 
     <!-- Notify View -->
-    <scripts id="notify-template" type="x-template">
+    <script id="notify-template" type="x-template">
         <div class="notify">
 			<p class="notify_text"></p>
         </div>
-    </scripts>
+    </script>
                 
                 </div>
         </div>
@@ -200,8 +200,8 @@
 <!-- Scripts
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <scripts src="bower_components/jquery/dist/jquery.min.js"></scripts>
-<scripts src="scripts/mammamiaCart.min.js"></scripts>
-<scripts src="scripts/mammamiaStore.js"></scripts>
+<scripts src="js/mammamiaCart.min.js"></scripts>
+<scripts src="js/mammamiaStore.min.js"></scripts>
 
-<scripts src="scripts/config.js"></scripts>
+<scripts src="js/config.js"></scripts>
 </html>

@@ -1,0 +1,31 @@
+// preparar parâmetros sql e bind
+$stmt = $conn->prepare("INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)
+VALUES (:nome, :sobrenome, :cpf, :endereco, :bairro, :cep, :numero, :estado, :cidade, :email, :senha)");
+$stmt->bindValue(":nome",$nome);
+$stmt->bindValue(":sobrenome",$sobrenome);
+$stmt->bindValue(":cpf",$cpf);
+$stmt->bindValue(":endereco",$endereco);
+$stmt->bindValue(":bairro",$bairro);
+$stmt->bindValue(":cep",$cep);
+$stmt->bindValue(":numero",$numero);
+$stmt->bindValue(":estado",$estado);
+$stmt->bindValue(":cidade",$cidade);
+$stmt->bindValue(":email",$email);
+$stmt->bindValue(":senha",md5($senha));
+
+//enserir
+try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)
+        VALUES ('Tarciano', 'Silva', '043.419.561-65', 'Rua São Francisco', 'Pinto Mandeira', '63101-064', '874', 'CE', 'Crato', 'tarciano2020@gmail.com', '17072000')";
+        // use exec() because no results are returned
+        $conn->exec($sql);
+        echo "New record created successfully";
+      } catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+      }
+      
+      $conn = null;
+      

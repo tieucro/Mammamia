@@ -23,25 +23,15 @@ include('Classes/conexao.php');
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4"><b>Login</b></h3>
                                         <h4 class="text-center font-weight-light my-4"><b>Mammamia</b></h4></div>
                         
-                                        <?php
-                    if(isset($_SESSION['nao_autenticado'])):
-                    ?>
-                    <div class="notification is-danger">
-                      <p>ERRO: Email ou senha inválidos.</p>
-                    </div>
-                    <?php
-                    endif;
-                    unset($_SESSION['nao_autenticado']);
-                    ?>
                                     <div class="card-body">
-                                        <form  action="login.php" method="POST">
+                                        <form  action="conexao.php" method="POST">
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                                <input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Digite seu Email" maxlength="32"/>
+                                                <label class="small mb-1" for="email">Email</label>
+                                                <input class="form-control py-4" id="email" type="email" placeholder="Digite seu Email" maxlength="32"/>
                                             </div>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputPassword">Senha</label>
-                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Digite sua Senha" maxlength="15"/>
+                                                <label class="small mb-1" for="senha">Senha</label>
+                                                <input class="form-control py-4" id="senha" type="password" placeholder="Digite sua Senha" maxlength="15"/>
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">

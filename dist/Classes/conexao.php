@@ -1,61 +1,56 @@
 <?php
-    //Conexão com bando de dados
-    function connection(){
-      
+$servername = "localhost";
+$username = "root";
+$password = "admin";
+$dbname = "mammamia";
 
-        $servername = "localhost";
-        $username   = "root";
-        $password   = "admin";
-        $db         = "bd_mammamia";
+// Criar conexão
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // Verificar a conexão
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Conectado com Sucesso";
+} catch(PDOException $e) {
+  echo "A conexão falhou: " . $e->getMessage();
+}
 
-        try {
-        $conn = new PDO("mysql:host=$servername;dbname=$db;charset=utf8", $username, $password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //echo "Conexão realizada com sucesso!";
-        return $conn;
-
-        } catch(PDOException $e) {
-        echo "Conexão falhou! Erro: " . $e->getMessage();
-        }
-    }
 
 class  Usuario
 {
     private $pdo;
     public $msgErro = "";
     
-function conectar($nome, $host, $email, $senha)  
+ function conectar($nome, $host, $email, $senha)  
 {
 global $pdo;
 try{
-$pdo = new PDO("mysql:dbname=".$nome.";host=".$host,$usuario,$senha);
+$pdo = new PDO("mysql:mammamia=".$nome.";host=".$host,$usuario,$senha);
 }catch (PDOException $e){
     $msgErro = getMessage();
 }
 
-function cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha)
+ function cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha)
 //caso nao cadastrar
 {
-$sql = $pdo->prepare("INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)");
-$sql->bindValue(":n",$nome);
-$sql->bindValue(":sb",$sobrenome);
-$sql->bindValue(":c",$cpf);
-$sql->bindValue(":en",$endereco);
-$sql->bindValue(":b",$bairro);
-$sql->bindValue(":ce",$cep);
-$sql->bindValue(":n",$numero);
-$sql->bindValue(":ed",$estado);
-$sql->bindValue(":cd",$cidade);
-$sql->bindValue(":e",$email);
-$sql->bindValue(":s",md5($senha));
-$sql->execute();
-return true;
+  $stmt = $conn->prepare("INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)
+  VALUES (:nome, :sobrenome, :cpf, :endereco, :bairro, :cep, :numero, :estado, :cidade, :email, :senha)");
+  $stmt->bindValue(":nome",$nome);
+  $stmt->bindValue(":sobrenome",$sobrenome);
+  $stmt->bindValue(":cpf",$cpf);
+  $stmt->bindValue(":endereco",$endereco);
+  $stmt->bindValue(":bairro",$bairro);
+  $stmt->bindValue(":cep",$cep);
+  $stmt->bindValue(":numero",$numero);
+  $stmt->bindValue(":estado",$estado);
+  $stmt->bindValue(":cidade",$cidade);
+  $stmt->bindValue(":email",$email);
+  $stmt->bindValue(":senha",md5($senha));
+return true;//tudo ok
 }
 {
   global $pdo;
   //verificar se já existe email cadastrado
-  $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e");
+  $sql = $pdo->prepare("SELECT id FROM usuarios WHERE email = :e");
   $sql->bindVALUE(":e",$email);
   $sql->execute();
   if($sql->rowC() > 0)
@@ -75,7 +70,7 @@ if($sql->rowCount() > 0)
 }
 }
 }
-function logar($email, $senha)
+ function logar($email, $senha)
 {
   global $pdo;
   //verificar se o email e senha estao cadastrados, se sim

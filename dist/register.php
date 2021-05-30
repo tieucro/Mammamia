@@ -2,8 +2,9 @@
 
 <?php
 session_start();
-require_once 'Classes/conexao.php';
-$u = new Usuario;
+include('Classes/banco.php');
+
+
 ?>
 <html lang="pt-br">
 
@@ -49,7 +50,7 @@ $u = new Usuario;
                                     <h3 class="text-center font-weight-light my-4">Cadastre-se</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form action="register.php" method="POST">
+                                    <form role="form" name="form_usuario" method="POST" action="cad_cliente.php" >
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -69,51 +70,50 @@ $u = new Usuario;
                                         <div class="form-group">
                                             <label class="small mb-1" for="cpf">CPF</label>
                                             <input class="form-control py-4" name="cpf" type="text"
-                                                aria-describedby="cpfHelp" placeholder="Ensira seu CPF"
-                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
+                                                aria-describedby="cpf" placeholder="Ensira seu CPF"
+                                                autocomplete="on" maxlength="14" onkeyup="mascara_cpf()"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="endereco">Endereço</label>
                                             <input class="form-control py-4" name="endereco" type="text"
-                                                aria-describedby="endereçoHelp" placeholder="Ensira seu Endereço" maxlength="32"/>
+                                                aria-describedby="endereco" placeholder="Ensira seu Endereço" maxlength="32"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="bairro">Bairro</label>
                                             <input class="form-control py-4" name="bairro" type="text"
-                                                aria-describedby="bairroHelp" placeholder="Ensira seu Bairro" maxlength="32"/>
+                                                aria-describedby="bairro" placeholder="Ensira seu Bairro" maxlength="32"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cep">CEP</label>
                                             <input class="form-control py-4" name="cep" type="text"
-                                                aria-describedby="cepHelp" placeholder="Ensira seu Cep" maxlength="9"
-                                                onkeyup="mascara_cep()" />
+                                                aria-describedby="cep" placeholder="Ensira seu Cep" maxlength="9" onkeyup="mascara_cep()"/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="numero">Numero da Residencia</label>
                                             <input class="form-control py-4" name="numero" type="text"
-                                                aria-describedby="endereçoHelp"
+                                                aria-describedby="endereço"
                                                 placeholder="Ensira o numero da residência" maxlength="8"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="estado">Estado</label>
                                             <input class="form-control py-4" name="estado" type="text"
-                                                aria-describedby="estadoHelp" placeholder="Ensira seu Estado" /
+                                                aria-describedby="estado" placeholder="Ensira seu Estado" /
                                                 maxlength="2">
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cidade">Cidade</label>
                                             <input class="form-control py-4" name="cidade" type="text"
-                                                aria-describedby="cidadeHelp" placeholder="Ensira sua Cidade" maxlength="20"/>
+                                                aria-describedby="cidade" placeholder="Ensira sua Cidade" maxlength="20"/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="email">Email</label>
                                             <input class="form-control py-4" name="email" type="email"
-                                                aria-describedby="emailHelp" placeholder="Ensira seu Email" maxlength="32"/>
+                                                aria-describedby="email" placeholder="Ensira seu Email" maxlength="32"/>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
@@ -136,42 +136,6 @@ $u = new Usuario;
                                                 href="login.php">Criar Conta</a></div>
                                     </form>
                                 </div>
-                                <?php
-                                if(isset($_POST['nome']))
-                                {
-                                    $nome = addcslashes($_POST['nome']);
-                                    $sobrenome = addcslashes($_POST['sobrenome']);
-                                    $cpf = addcslashes($_POST['cpf']);
-                                    $endereco = addcslashes($_POST['endereco']);
-                                    $bairro = addcslashes($_POST['bairro']);
-                                    $cep = addcslashes($_POST['cep']);
-                                    $numero = addcslashes($_POST['numero']);
-                                    $estado = addcslashes($_POST['estado']);
-                                    $cidade = addcslashes($_POST['cidade']);
-                                    $email = addcslashes($_POST['email']);
-                                    $senha = addcslashes($_POST['senha']);
-                                    $confirmesenha = addcslashes($_POST['confirmesenha']);
-                                    //verifica se esta preenchido
-                                    if(!empty($nome) && !empty($sobrenome) && !empty($cpf) && !empty($endereco) && !empty($bairro) && !empty($cep) && !empty($numero) && !empty($estado) && !empty($cidade) && !empty($email) && !empty($senha)  && !empty($confirmesenha))
-
-                                {
-                                    $u->conectar("bd_mammamia","localhost","root","admin");
-                                    if($u->msgErro == "")//se esta tudo ok
-                                {}
-                            }
-                            echo "Erro".$u->msgErro;
-                                 {
-                                     if($senha == $confirmesenha)
-                                     {
-                                     
-                                     }
-                                     $u->cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha, $confirmesenha);
-                                 }
-                                }
-                                
-
-                                
-                                ?>
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="login.php">Já possui conta? Ir para login</a></div>
                                 </div>
