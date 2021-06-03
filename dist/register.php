@@ -4,7 +4,6 @@
 session_start();
 include('Classes/banco.php');
 
-
 ?>
 <html lang="pt-br">
 
@@ -38,7 +37,7 @@ include('Classes/banco.php');
 
 </head>
 
-<body background="https://www.alegrafoods.com.br/wp-content/uploads/2020/07/9-img-blog.png">
+<body background="pizzas/piz04.jpg">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
@@ -50,85 +49,85 @@ include('Classes/banco.php');
                                     <h3 class="text-center font-weight-light my-4">Cadastre-se</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form role="form" name="form_usuario" method="POST" action="cad_cliente.php" >
+                                    <form role="form" name="form_usuarios" method="POST" action="cad_cliente.php" >
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="nome">Nome</label>
-                                                    <input class="form-control py-4" name="nome" type="text"
+                                                    <input class="form-control py-4" id="nome" type="text"
                                                         placeholder="Digite seu nome" maxlength="20"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="sobrenome">Sobrenome</label>
-                                                    <input class="form-control py-4" name="sobrenome" type="text"
+                                                    <input class="form-control py-4" id="sobrenome" type="text"
                                                         placeholder="Digite seu sobrenome" maxlength="20"/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cpf">CPF</label>
-                                            <input class="form-control py-4" name="cpf" type="text"
-                                                aria-describedby="cpf" placeholder="Ensira seu CPF"
-                                                autocomplete="on" maxlength="14" onkeyup="mascara_cpf()"/>
+                                            <input class="form-control py-4" id="cpf" type="text"
+                                                aria-describedby="cpfHelp" placeholder="Ensirir CPF"
+                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="endereco">Endereço</label>
-                                            <input class="form-control py-4" name="endereco" type="text"
+                                            <input class="form-control py-4" id="endereco" type="text"
                                                 aria-describedby="endereco" placeholder="Ensira seu Endereço" maxlength="32"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="bairro">Bairro</label>
-                                            <input class="form-control py-4" name="bairro" type="text"
+                                            <input class="form-control py-4" id="bairro" type="text"
                                                 aria-describedby="bairro" placeholder="Ensira seu Bairro" maxlength="32"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cep">CEP</label>
-                                            <input class="form-control py-4" name="cep" type="text"
-                                                aria-describedby="cep" placeholder="Ensira seu Cep" maxlength="9" onkeyup="mascara_cep()"/>
+                                            <input class="form-control py-4" id="cep" type="text"
+                                                aria-describedby="cep" placeholder="Ensira seu Cep" autocomplete="off" maxlength="9" onkeyup="mascara_cep()"/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="numero">Numero da Residencia</label>
-                                            <input class="form-control py-4" name="numero" type="text"
+                                            <input class="form-control py-4" id="numero" type="text"
                                                 aria-describedby="endereço"
                                                 placeholder="Ensira o numero da residência" maxlength="8"/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="estado">Estado</label>
-                                            <input class="form-control py-4" name="estado" type="text"
+                                            <input class="form-control py-4" id="estado" type="text"
                                                 aria-describedby="estado" placeholder="Ensira seu Estado" /
                                                 maxlength="2">
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cidade">Cidade</label>
-                                            <input class="form-control py-4" name="cidade" type="text"
+                                            <input class="form-control py-4" id="cidade" type="text"
                                                 aria-describedby="cidade" placeholder="Ensira sua Cidade" maxlength="20"/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="email">Email</label>
-                                            <input class="form-control py-4" name="email" type="email"
+                                            <input class="form-control py-4" id="email" type="email"
                                                 aria-describedby="email" placeholder="Ensira seu Email" maxlength="32"/>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="senha">Senha</label>
-                                                    <input class="form-control py-4" name="senha" type="password"
+                                                    <input class="form-control py-4" id="senha" type="password"
                                                         placeholder="Ensira sua Senha" maxlength="15"/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="confirmesenha">Confirme a
+                                                    <label class="small mb-1" for="confirmasenha">Confirme a
                                                         Senha</label>
-                                                    <input class="form-control py-4" name="confirmesenha"
-                                                        type="password" placeholder="Confirme sua Senha" maxlength="15"/>
+                                                    <input class="form-control py-4" id="confirmasenha"
+                                                        type="password" placeholder="Confirmar a sua Senha" maxlength="15"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -136,6 +135,7 @@ include('Classes/banco.php');
                                                 href="login.php">Criar Conta</a></div>
                                     </form>
                                 </div>
+                                
                                 <div class="card-footer text-center">
                                     <div class="small"><a href="login.php">Já possui conta? Ir para login</a></div>
                                 </div>

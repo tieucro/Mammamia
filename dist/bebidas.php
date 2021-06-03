@@ -151,22 +151,6 @@
             </div>
         </div>
     </script>
-
-     <!-- Error View -->
-     <script id="error-template" type="x-template">
-        <div class="error">
-            <b>Desculpe, algo deu errado:(</b>
-			<p class="error_text"></p>
-			<a href="#" class="close alert_close">&times;</a>
-        </div>
-    </script>
-
-    <!-- Notify View -->
-    <script id="notify-template" type="x-template">
-        <div class="notify">
-			<p class="notify_text"></p>
-        </div>
-    </script>
                 
                 </div>
         </div>
@@ -199,9 +183,9 @@
 </body>
 <!-- Scripts
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<scripts src="bower_components/jquery/dist/jquery.min.js"></scripts>
-<scripts src="js/mammamiaCart.min.js"></scripts>
-<scripts src="js/mammamiaStore.min.js"></scripts>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/mammamiaCart.min.js"></script>
+<script src="js/mammamiaStore.min.js"></script>
 
-<scripts src="js/config.js"></scripts>
+<script src="js/config.js"></script>
 </html>

@@ -36,7 +36,7 @@
 
 </head>
 
-<body background="https://www.alegrafoods.com.br/wp-content/uploads/2020/07/9-img-blog.png">
+<body background="pizzas/piz02.jpg">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>

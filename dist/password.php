@@ -10,7 +10,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
     </head>
-    <body background="https://www.alegrafoods.com.br/wp-content/uploads/2020/07/9-img-blog.png">
+    <body background="pizzas/piz03.jpg">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>

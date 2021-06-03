@@ -20,8 +20,8 @@ class  Usuario
     private $pdo;
     public $msgErro = "";
     
- function conectar($nome, $host, $email, $senha)  
-{
+function conectar($nome, $host, $email, $senha){  
+
 global $pdo;
 try{
 $pdo = new PDO("mysql:mammamia=".$nome.";host=".$host,$usuario,$senha);
@@ -29,9 +29,9 @@ $pdo = new PDO("mysql:mammamia=".$nome.";host=".$host,$usuario,$senha);
     $msgErro = getMessage();
 }
 
- function cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha)
+function cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $estado, $cidade, $email, $senha){
 //caso nao cadastrar
-{
+
   $stmt = $conn->prepare("INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)
   VALUES (:nome, :sobrenome, :cpf, :endereco, :bairro, :cep, :numero, :estado, :cidade, :email, :senha)");
   $stmt->bindValue(":nome",$nome);
@@ -50,28 +50,28 @@ return true;//tudo ok
 {
   global $pdo;
   //verificar se já existe email cadastrado
-  $sql = $pdo->prepare("SELECT id FROM usuarios WHERE email = :e");
-  $sql->bindVALUE(":e",$email);
-  $sql->execute();
-  if($sql->rowC() > 0)
+  $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = :email");
+  $stmt->bindVALUE(":email",$email);
+  $stmt->execute();
+  if($stmt->rowC() > 0)
   return false;//ja cadastrado
  function logar($email, $senha)
 {
 global $pdo;
 //verificar se o email e senha estao cadastrados, se sim
-$sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
-$sql->bindValue(":e",$email);
-$sql->bindValue(":s",$senha);
-$sql->execute();
-if($sql->rowCount() > 0)
+$stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = :email AND senha = :senha");
+$stmt->bindValue(":e",$email);
+$stmt->bindValue(":s",$senha);
+$stmt->execute();
+if($stmt->rowCount() > 0)
 {
 }
 }
 }
 }
 }
- function logar($email, $senha)
-{
+ function logar($email, $senha){
+
   global $pdo;
   //verificar se o email e senha estao cadastrados, se sim
   $sql = $pdo->prepare("SELECT id_usuario FROM usuarios WHERE email = :e AND senha = :s");
