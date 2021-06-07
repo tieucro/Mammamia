@@ -1,6 +1,18 @@
 <?php
-    include('Classes/banco.php');
-    $conn = connection();
+    //conexão com o banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "admin";
+$dbname = "mammamia";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Conectado com Sucesso";
+} catch(PDOException $e) {
+  echo "A conexão falhou: " . $e->getMessage();
+}
    
     
 
@@ -46,24 +58,7 @@ $stmt->bindParam(":senha",md5($senha));
     }
     $conn = null;
 
-   
-    //verificar se clicou no botao
-if(isset($_POST['nome']))
 
-$nome  = addcslashes($_POST['nome']);
-$sobrenome = addcslashes($_POST['sobrenome']);
-$cpf = addcslashes($_POST['cpf']);
-$endereco = addcslashes($_POST['endereco']);
-$bairro = addcslashes($_POST['bairro']);
-$cep = addcslashes($_POST['cep']);
-$numero = addcslashes($_POST['numero']);
-$estado = addcslashes($_POST['estado']);
-$cidade = addcslashes($_POST['cidade']);
-$email = addcslashes($_POST['email']);
-$senha = addcslashes($_POST['senha']);
-$confirmarsenha = addcslashes($_POST['confirmarsenha']);
-//verificar se o botao ta preenchido
-if(!empty($nome) && !empty($sobrenome) && !empty($cpf) && !empty($endereco) && !empty($bairro) && !empty($cep) && !empty($numero) && !empty($estado) &&  !empty($cidade) && !empty($email) && !empty($senha) && !empty($confirmarsenha)) 
-
+    header('Location: login.php');
 ?> 
 

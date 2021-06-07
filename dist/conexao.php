@@ -34,17 +34,32 @@ function cadastrar($nome, $sobrenome, $cpf, $endereco, $bairro, $cep, $numero, $
 
   $stmt = $conn->prepare("INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)
   VALUES (:nome, :sobrenome, :cpf, :endereco, :bairro, :cep, :numero, :estado, :cidade, :email, :senha)");
-  $stmt->bindValue(":nome",$nome);
-  $stmt->bindValue(":sobrenome",$sobrenome);
-  $stmt->bindValue(":cpf",$cpf);
-  $stmt->bindValue(":endereco",$endereco);
-  $stmt->bindValue(":bairro",$bairro);
-  $stmt->bindValue(":cep",$cep);
-  $stmt->bindValue(":numero",$numero);
-  $stmt->bindValue(":estado",$estado);
-  $stmt->bindValue(":cidade",$cidade);
-  $stmt->bindValue(":email",$email);
-  $stmt->bindValue(":senha",md5($senha));
+  $stmt->bindParam(":nome",$nome);
+  $stmt->bindParam(":sobrenome",$sobrenome);
+  $stmt->bindParam(":cpf",$cpf);
+  $stmt->bindParam(":endereco",$endereco);
+  $stmt->bindParam(":bairro",$bairro);
+  $stmt->bindParam(":cep",$cep);
+  $stmt->bindParam(":numero",$numero);
+  $stmt->bindParam(":estado",$estado);
+  $stmt->bindParam(":cidade",$cidade);
+  $stmt->bindParam(":email",$email);
+  $stmt->bindParam(":senha",md5($senha));
+  
+  $nome           = $_POST['nome'];
+    $sobrenome           = $_POST['sobrenome'];
+    $cpf          = $_POST['cpf'];
+    $endereco        = $_POST['endereco'];
+    $bairro       = $_POST['bairro'];
+    $cep           = $_POST['cep'];
+    $numero           = $_POST['numero'];
+    $estado           = $_POST['estado'];
+    $cidade           = $_POST['cidade'];
+    $email           = $_POST['email'];
+    $senha           = $_POST['senha'];
+    
+
+    $stmt->execute();
 return true;//tudo ok
 }
 {
@@ -60,8 +75,8 @@ return true;//tudo ok
 global $pdo;
 //verificar se o email e senha estao cadastrados, se sim
 $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = :email AND senha = :senha");
-$stmt->bindValue(":e",$email);
-$stmt->bindValue(":s",$senha);
+$stmt->bindValue(":email",$email);
+$stmt->bindValue(":senha",$senha);
 $stmt->execute();
 if($stmt->rowCount() > 0)
 {
@@ -92,5 +107,5 @@ else
   return false;//nao foi possivel logar
 }
 }
-  
+header('Location: index.php');
 ?>

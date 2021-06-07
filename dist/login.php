@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('Classes/conexao.php');
+include 'banco.php';
 
 ?>
 
@@ -24,7 +24,7 @@ include('Classes/conexao.php');
                                         <h4 class="text-center font-weight-light my-4"><b>Mammamia</b></h4></div>
                         
                                     <div class="card-body">
-                                        <form  action="conexao.php" method="POST">
+                                        <form  role="form" name="form_usuarios" method="POST" action="conexao.php">
                                             <div class="form-group">
                                                 <label class="small mb-1" for="email">Email</label>
                                                 <input class="form-control py-4" id="email" type="email" placeholder="Digite seu Email" maxlength="32" required/>
@@ -41,7 +41,7 @@ include('Classes/conexao.php');
                                             </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="password.php">Esqueceu a senha?</a>
-                                                <button class="btn btn-primary" href="index.php">Login</button>
+                                                <button class="btn btn-primary">Login</button>
                                             </div>
                                         </form>
                                     </div>
