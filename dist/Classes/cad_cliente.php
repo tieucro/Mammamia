@@ -12,17 +12,17 @@
    
     $stmt = $conn->prepare("INSERT INTO usuarios (nome, sobrenome, cpf, endereco, bairro, cep, numero, estado, cidade, email, senha)
 VALUES (:nome, :sobrenome, :cpf, :endereco, :bairro, :cep, :numero, :estado, :cidade, :email, :senha)");
-$stmt->bindValue(":nome",$nome);
-$stmt->bindValue(":sobrenome",$sobrenome);
-$stmt->bindValue(":cpf",$cpf);
-$stmt->bindValue(":endereco",$endereco);
-$stmt->bindValue(":bairro",$bairro);
-$stmt->bindValue(":cep",$cep);
-$stmt->bindValue(":numero",$numero);
-$stmt->bindValue(":estado",$estado);
-$stmt->bindValue(":cidade",$cidade);
-$stmt->bindValue(":email",$email);
-$stmt->bindValue(":senha",md5($senha));
+$stmt->bindParam(":nome",$nome);
+$stmt->bindParam(":sobrenome",$sobrenome);
+$stmt->bindParam(":cpf",$cpf);
+$stmt->bindParam(":endereco",$endereco);
+$stmt->bindParam(":bairro",$bairro);
+$stmt->bindParam(":cep",$cep);
+$stmt->bindParam(":numero",$numero);
+$stmt->bindParam(":estado",$estado);
+$stmt->bindParam(":cidade",$cidade);
+$stmt->bindParam(":email",$email);
+$stmt->bindParam(":senha",md5($senha));
 
     $nome           = $_POST['nome'];
     $sobrenome           = $_POST['sobrenome'];
@@ -66,3 +66,4 @@ $confirmarsenha = addcslashes($_POST['confirmarsenha']);
 if(!empty($nome) && !empty($sobrenome) && !empty($cpf) && !empty($endereco) && !empty($bairro) && !empty($cep) && !empty($numero) && !empty($estado) &&  !empty($cidade) && !empty($email) && !empty($senha) && !empty($confirmarsenha)) 
 
 ?> 
+

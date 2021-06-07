@@ -33,10 +33,7 @@ include('Classes/banco.php');
             }
         }
     </script>
-
-
 </head>
-
 <body background="pizzas/piz04.jpg">
     <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
@@ -55,14 +52,14 @@ include('Classes/banco.php');
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="nome">Nome</label>
                                                     <input class="form-control py-4" id="nome" type="text"
-                                                        placeholder="Digite seu nome" maxlength="20"/>
+                                                        placeholder="Digite seu nome" maxlength="20" required/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="sobrenome">Sobrenome</label>
                                                     <input class="form-control py-4" id="sobrenome" type="text"
-                                                        placeholder="Digite seu sobrenome" maxlength="20"/>
+                                                        placeholder="Digite seu sobrenome" maxlength="20" required/>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,56 +67,56 @@ include('Classes/banco.php');
                                             <label class="small mb-1" for="cpf">CPF</label>
                                             <input class="form-control py-4" id="cpf" type="text"
                                                 aria-describedby="cpfHelp" placeholder="Ensirir CPF"
-                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
+                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="endereco">Endereço</label>
                                             <input class="form-control py-4" id="endereco" type="text"
-                                                aria-describedby="endereco" placeholder="Ensira seu Endereço" maxlength="32"/>
+                                                aria-describedby="endereco" placeholder="Ensira seu Endereço" maxlength="32" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="bairro">Bairro</label>
                                             <input class="form-control py-4" id="bairro" type="text"
-                                                aria-describedby="bairro" placeholder="Ensira seu Bairro" maxlength="32"/>
+                                                aria-describedby="bairro" placeholder="Ensira seu Bairro" maxlength="32" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cep">CEP</label>
                                             <input class="form-control py-4" id="cep" type="text"
-                                                aria-describedby="cep" placeholder="Ensira seu Cep" autocomplete="off" maxlength="9" onkeyup="mascara_cep()"/>
+                                                aria-describedby="cep" placeholder="Ensira seu Cep" autocomplete="off" maxlength="9" onkeyup="mascara_cep()" required/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="numero">Numero da Residencia</label>
                                             <input class="form-control py-4" id="numero" type="text"
                                                 aria-describedby="endereço"
-                                                placeholder="Ensira o numero da residência" maxlength="8"/>
+                                                placeholder="Ensira o numero da residência" maxlength="8" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="estado">Estado</label>
                                             <input class="form-control py-4" id="estado" type="text"
-                                                aria-describedby="estado" placeholder="Ensira seu Estado" /
-                                                maxlength="2">
+                                                aria-describedby="estado" placeholder="Ensira seu Estado"
+                                                maxlength="2" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cidade">Cidade</label>
                                             <input class="form-control py-4" id="cidade" type="text"
-                                                aria-describedby="cidade" placeholder="Ensira sua Cidade" maxlength="20"/>
+                                                aria-describedby="cidade" placeholder="Ensira sua Cidade" maxlength="20" required/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="email">Email</label>
                                             <input class="form-control py-4" id="email" type="email"
-                                                aria-describedby="email" placeholder="Ensira seu Email" maxlength="32"/>
+                                                aria-describedby="email" placeholder="Ensira seu Email" maxlength="32" required/>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="senha">Senha</label>
                                                     <input class="form-control py-4" id="senha" type="password"
-                                                        placeholder="Ensira sua Senha" maxlength="15"/>
+                                                        placeholder="Ensira sua Senha" maxlength="15" required/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -127,12 +124,11 @@ include('Classes/banco.php');
                                                     <label class="small mb-1" for="confirmasenha">Confirme a
                                                         Senha</label>
                                                     <input class="form-control py-4" id="confirmasenha"
-                                                        type="password" placeholder="Confirmar a sua Senha" maxlength="15"/>
+                                                        type="password" placeholder="Confirmar a sua Senha" maxlength="15" required/>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group mt-4 mb-0" input type="submit"><a class="btn btn-primary btn-block"
-                                                href="login.php">Criar Conta</a></div>
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                                     </form>
                                 </div>
                                 

@@ -60,7 +60,7 @@
                                         <div
                                             class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                             <a class="small" href="password.php">Esqueceu a senha?</a>
-                                            <a class="btn btn-primary" href="index.php">Login</a>
+                                            <a class="btn btn-primary" href="funcionario.php">Login</a>
                                         </div>
                                     </form>
                                 </div>
