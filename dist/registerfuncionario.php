@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('banco.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,7 +27,7 @@
     <!-- Macara do Telefone-->
     <script>
         function mascara_fone() {
-            var fone = document.getElementById('fone')
+            var fone = document.getElementById('telefone')
             if (fone.value.length == 2) {
                 fone.value += " "
             } else if (fone.value.length == 5) {
@@ -48,59 +54,58 @@
                                     <h3 class="text-center font-weight-light my-4">Cadastro do Funcionário</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form role="form" name="form_funcionarios" method="POST" action="cad_funcionario.php" >
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputFirstName">Nome</label>
-                                                    <input class="form-control py-4" id="inputFirstName" type="text"
-                                                        placeholder="Digite seu nome" maxlength="20"/>
+                                                    <label class="small mb-1" for="nome">Nome</label>
+                                                    <input class="form-control py-4" id="nome" name="nome" type="text"
+                                                        placeholder="Digite seu nome" maxlength="20" required/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputLastName">Sobrenome</label>
-                                                    <input class="form-control py-4" id="inputLastName" type="text"
-                                                        placeholder="Digite seu sobrenome" maxlength="20"/>
+                                                    <label class="small mb-1" for="sobrenome">Sobrenome</label>
+                                                    <input class="form-control py-4" id="sobrenome" name="sobrenome" type="text"
+                                                        placeholder="Digite seu sobrenome" maxlength="20" required/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cpf">CPF</label>
-                                            <input class="form-control py-4" id="cpf" type="text"
+                                            <input class="form-control py-4" id="cpf" name="cpf" type="text"
                                                 aria-describedby="cpfHelp" placeholder="Ensirir CPF"
-                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
+                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" required/>
                                         </div>
                                         <div class="form-group">
-                                            <label class="small mb-1" for="fone">Telefone</label>
-                                            <input class="form-control py-4" id="fone" type="text"
-                                                aria-describedby="foneHelp" placeholder="Ensirir numero de celular"
-                                                autocomplete="off" maxlength="16" onkeyup="mascara_fone()" />
+                                            <label class="small mb-1" for="telefone">Telefone</label>
+                                            <input class="form-control py-4" id="telefone" name="telefone" type="text"
+                                                aria-describedby="telefone" placeholder="Ensirir numero de celular"
+                                                autocomplete="off" maxlength="16" onkeyup="mascara_fone()" required/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                            <input class="form-control py-4" id="inputEmailAddress" type="email"
-                                                aria-describedby="emailHelp" placeholder="Ensirir Email" maxlength="32"/>
+                                            <input class="form-control py-4"  id="email" name="email"
+                                                aria-describedby="email" placeholder="Ensirir Email" maxlength="32" required/>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputPassword">Senha</label>
-                                                    <input class="form-control py-4" id="inputPassword" type="password"
-                                                        placeholder="Ensirir Senha" maxlength="15"/>
+                                                    <label class="small mb-1" for="senha">Senha</label>
+                                                    <input class="form-control py-4"id="senha" name="senha" type="password"
+                                                        placeholder="Ensirir Senha" maxlength="15" required/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="small mb-1" for="inputConfirmPassword">Confirme a
+                                                    <label class="small mb-1" for="confirmasenha">Confirme a
                                                         Senha</label>
-                                                    <input class="form-control py-4" id="inputConfirmPassword"
-                                                        type="password" placeholder="Confirme sua Senha" maxlength="15"/>
+                                                    <input class="form-control py-4" id="confirmasenha" name="confirmasenha"
+                                                        type="password" placeholder="Confirme sua Senha" maxlength="15" required/>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block"
-                                                href="login.php">Criar Conta</a></div>
+                                        <div class="form-group mt-4 mb-0"> <button type="submit" class="btn btn-primary btn-block">Cadastrar</button></div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">
