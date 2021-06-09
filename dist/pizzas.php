@@ -102,7 +102,7 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container ">
         <div class="row">
-        <br><a class="brand" href="#"></a>
+        <br><a class="" href="#"></a>
             <a class="button button-primary u-pull-right mammamiaStore_viewCart">
                 <i class="fa fa-shopping-cart"></i> Carrinho <span class="mammamiaCart_total"></span>
             </a>

@@ -1,7 +1,7 @@
 {
     "products": [{
             "name": "Pizza de Calabresa",
-            "price": "23.99",
+            "price": "R$ 23.99",
             "options": [
                 { "Size": "Pequena,Média,Grande" }
             ],
@@ -10,7 +10,7 @@
         },
         {
             "name": "Pizza de Frango com Catupiry",
-            "price": "23.99",
+            "price": "R$ 23.99",
             "options": [
                 { "Size": "Pequena,Média,Grande" }
             ],
@@ -19,7 +19,7 @@
         },
         {
             "name": "Pizza de Chocolate",
-            "price": "23.99",
+            "price": "R$ 23.99",
             "options": [
                 { "Size": "Pequena,Média,Grande" }
             ],
