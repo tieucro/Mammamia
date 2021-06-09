@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('Classes/conexao.php');
+include 'banco.php';
 
 ?>
 
@@ -127,10 +127,10 @@ include('Classes/conexao.php');
                   <thead>
                   <tr>
                     <th>Id</th>
-                    <th>NOME</th>
-                    <th>CPF</th>
-                    <th>Fone</th>
-                    <th>Cep</th>
+                    <th>Quantidade</th>
+                    <th>Tipo</th>
+                    <th>tamanho</th>
+                    <th>preco</th>
                     <th>Editar Dados</th>
                   </tr>
                   </thead>
@@ -140,12 +140,12 @@ include('Classes/conexao.php');
                   <?php
                     
                     include "banco.php";
-                    $conn = connection();
+                   
 
                     try {
                     
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $stmt = $conn->prepare("SELECT * FROM usuario");
+                    $stmt = $conn->prepare("SELECT * FROM pizzas");
                     $stmt->execute();
 
                     // set the resulting array to associative
@@ -155,10 +155,10 @@ include('Classes/conexao.php');
                         //var_dump($v);
                         echo '<tr>';
                         echo '<td>'.$v['id'].'</td>';
-                        echo '<td>'.$v['nome'].'</td>';
-                        echo '<td>'.$v['cpf'].'</td>';
-                        echo '<td>'.$v['celular'].'</td>';
-                        echo '<td>'.$v['cep'].'</td>';
+                        echo '<td>'.$v['quantidade'].'</td>';
+                        echo '<td>'.$v['tipo'].'</td>';
+                        echo '<td>'.$v['tamanho'].'</td>';
+                        echo '<td>'.$v['preco'].'</td>';
                         echo '<td style="text-align:center"> 
                               <a class="btn btn-primary btn-sm" href="vis_dist.php?id='.$v['id'].'"><i class="fas fa-folder"></i></a>
                               <a class="btn btn-info btn-sm" href="edt_dist.php?id='.$v['id'].'"><i class="fas fa-pencil-alt"></i></a>                            
@@ -194,9 +194,7 @@ include('Classes/conexao.php');
   </div>
   <!-- /.content-wrapper -->
 
-  <?php
-    include "_includes/footer.php";
-  ?>
+  
 
 
 

@@ -1,3 +1,9 @@
+<?php
+session_start();
+include 'banco.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -37,17 +43,17 @@
 
 
                                 <div class="card-body">
-                                    <form>
+                                    <form role="form" name="form_funcionarios" method="POST" action="conexao.php">
                                         <div class="form-group">
                                             <label class="small mb-1" for="cpf">CPF</label>
                                             <input class="form-control py-4" id="cpf" type="text"
                                                 aria-describedby="cpfHelp" placeholder="Ensirir CPF"
-                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" />
+                                                autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" required/>
                                         </div>
                                         <div class="form-group">
-                                            <label class="small mb-1" for="inputPassword">Senha</label>
-                                            <input class="form-control py-4" id="inputPassword" type="password"
-                                                placeholder="Digite sua Senha" />
+                                            <label class="small mb-1" for="senha">Senha</label>
+                                            <input class="form-control py-4" id="senha" type="password"
+                                                placeholder="Digite sua Senha" required/>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox">
@@ -59,9 +65,11 @@
                                         </div>
                                         <div
                                             class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="password.php">Esqueceu a senha?</a>
-                                            <a class="btn btn-primary" href="funcionario.php">Login</a>
+                                            <button type="submit" class="btn btn-primary btn-block">Login</button>
                                         </div>
+                                        <div class="card-footer text-center">
+                                    <div class="small"><a href="password.php">Esqueceu a senha?</a></div>
+                                </div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">

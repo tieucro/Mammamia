@@ -100,3 +100,13 @@ $senha = addcslashes($_POST['senha']);
 $confirmarsenha = addcslashes($_POST['confirmarsenha']);
 //verificar se o botao ta preenchido
 if(!empty($nome) && !empty($sobrenome) && !empty($cpf) && !empty($endereco) && !empty($bairro) && !empty($cep) && !empty($numero) && !empty($estado) &&  !empty($cidade) && !empty($email) && !empty($senha) && !empty($confirmarsenha)) 
+
+
+"products": [{
+            "name": "Pizza de Calabresa",
+            "price": "25.99",
+            "options": [
+                { "Size": "Pequena,Média,Grande" }
+            ],
+            "image": "...pizzas/piz.jpg",
+            "description": "This is a very awesome grey T-shirt"

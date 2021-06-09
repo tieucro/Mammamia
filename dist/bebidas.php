@@ -8,7 +8,6 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>OpenRoad</title>
-    <link href="css/styles.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
@@ -21,7 +20,8 @@
 <!-- ESTILOS CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/imports.min.css">
-    <link rel="stylesheet" href="css/mammamiaStore.css">
+    <link rel="stylesheet" href="css/mammamiaStore.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -61,13 +61,13 @@
 <!-- Carrinho -->
         <ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
-                <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i></a>
+                <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i> <span class="mammamiaCart_total"></span></a>
+                <div class="mammamiaStore_container"></div>
+        <div class="mammamiaStore_cart_container"></div>
                 </li>
         </ul>
         </div>
-        <div class="mammamiaStore_container"></div>
-        <div class="mammamiaStore_cart_container"></div>
-    </div>
+        
     </nav>
     <!-- Menu -->
     <div id="layoutSidenav">
@@ -107,7 +107,8 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
-                    <!-- Products View -->
+
+                        <!-- Products View -->
     <script id="products-template" type="x-template">
         <div class="column">
             <div class="mammamiaCart_shelfItem">
@@ -151,7 +152,17 @@
             </div>
         </div>
     </script>
-                
+    
+    <!-- Error View -->
+    <script id="error-template" type="x-template">
+        <div class="error">
+            <b>Desculpe, algo deu errado:(</b>
+			<p class="error_text"></p>
+			<a href="#" class="close alert_close">&times;</a>
+        </div>
+    </script>
+
+
                 </div>
         </div>
     </div>
@@ -184,6 +195,7 @@
 <!-- Scripts
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/mammamiaCart.min.js"></script>
 <script src="js/mammamiaStore.min.js"></script>
 

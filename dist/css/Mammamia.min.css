@@ -16,7 +16,7 @@ select {
     margin-right: 10px
 }
 
-.mammamiaStore {
+.Mammamia {
     margin-top: 20px
 }
 
@@ -136,8 +136,8 @@ select {
     text-align: right
 }
 
-.mammamiaStore_cart,
-.mammamiaStore_detailView {
+.Mammamia_cart,
+.Mammamia_detailView {
     position: relative;
     border: 1px solid #EFEFEF
 }
@@ -150,40 +150,40 @@ select {
     display: block!important
 }
 
-.mammamiaStore_getDetail_container {
+.Mammamia_getDetail_container {
     display: block;
     float: left;
     width: 50%;
     padding: 5px 0
 }
 
-.mammamiaStore_detailView {
+.Mammamia_detailView {
     margin: 15px 0
 }
 
-.mammamiaStore_detailView.mammamiaCart_shelfItem {
+.Mammamia_detailView.mammamiaCart_shelfItem {
     padding: 26px 18px 8px
 }
 
-.mammamiaStore_detailView .item_add {
+.Mammamia_detailView .item_add {
     margin: 0
 }
 
-.mammamiaStore_detailView .item_name {
+.Mammamia_detailView .item_name {
     margin-bottom: 1rem
 }
 
-.mammamiaStore_detailView .item_price {
+.Mammamia_detailView .item_price {
     display: block;
     margin-bottom: 1.5rem
 }
 
 .hidden,
-.mammamiaStore_cart_container {
+.Mammamia_cart_container {
     display: none
 }
 
-.mammamiaStore_cart {
+.Mammamia_cart {
     padding: 22px;
     min-height: 230px;
     margin: 15px 0
@@ -274,16 +274,16 @@ p.error_text {
 }
 
 @media (max-width:920px) {
-    .mammamiaStore_getDetail_container {
+    .Mammamia_getDetail_container {
         width: 100%
     }
     .mammamiaCart_shelfItem {
-        position: relative;
+        position: relative
     }
     .mammamiaCart_shelfItem .item_name {
         font-size: 1.8rem
     }
-    .mammamiaStore_getDetail {
+    .Mammamia_getDetail {
         position: inherit;
         display: block;
         width: 100%;
@@ -292,13 +292,13 @@ p.error_text {
 }
 
 @media (max-width:620px) {
-    .mammamiaStore_detailView .item_thumb {
+    .Mammamia_detailView .item_thumb {
         margin-bottom: 10px;
         display: block;
         width: 100%;
         height: auto
     }
-    .mammamia_detailView .item_add {
+    .Mammamia_detailView .item_add {
         position: inherit;
         display: block;
         width: 100%

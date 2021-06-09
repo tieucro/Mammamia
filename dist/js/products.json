@@ -1,11 +1,11 @@
 {
     "products": [{
-            "name": "Pizza frango com catupiry",
+            "name": "Pizza de Calabresa",
             "price": "25.99",
             "options": [
                 { "Size": "Pequena,Média,Grande" }
             ],
-            "image": "https://pizzariamamaclara.com.br/st/image/cache/catalog/20-Gigas-Pizza-Frango-com-Catupiry-500x500.png",
+            "image": "...pizzas/piz.jpg",
             "description": "This is a very awesome grey T-shirt"
         },
         {

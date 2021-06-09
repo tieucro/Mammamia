@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('Classes/conexao.php');
+include 'banco.php';
 
 ?>
 
@@ -105,27 +105,27 @@ include('Classes/conexao.php');
         <!-- general form elements -->
         <div class="card card-primary">
           <div class="card-header">
-            <h3 class="card-title">Cadastro de Usuário</h3>
+            <h3 class="card-title">Cadastro de Produto</h3>
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form role="form" name="form_usuario" method="POST" action="cad_dist.php" >
+          <form role="form" name="form_usuario" method="POST" action="funcionario.php" >
             <div class="card-body">
               <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Usuário" required>
+                <label for="nome"><P>Quantidade</P></label>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Escolha a quantidade de pizza a ser registrada" required>
               </div>
               <div class="form-group">
-                <label for="cpf">CPF</label>
-                <input type="text" class="form-control" id="cpf" name="cpf" required>
+                <label for="tipo">Tipo de Pizza</label>
+                <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Digite o Sabor da Pizza" required>
               </div>
               <div class="form-group">
-                <label for="celular">Cep</label>
-                <input type="text" class="form-control" id="cep" name="cep">
+                <label for="tamanho">Tamanho da Pizza</label>
+                <input type="text" class="form-control" id="tamanho" name="tamanho" placeholder="Digite o tamanho da pizza" required>
               </div>
               <div class="form-group">
-                <label for="celular">Celular</label>
-                <input type="text" class="form-control" id="celular" name="celular">
+                <label for="preco">Preço da Pizza</label>
+                <input type="text" class="form-control" id="preco" name="preco" placeholder="Digite o Preço da Pizza" required>
               </div>
             </div>
             <!-- /.card-body -->
@@ -134,15 +134,7 @@ include('Classes/conexao.php');
             </div>
           </form>
         </div>
-        <!-- /.card -->
-        
-      </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-                </div>
+       
         </div>
     </div>
     </main>

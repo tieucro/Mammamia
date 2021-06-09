@@ -50,11 +50,14 @@
             </li>
         </ul>
 <!-- Carrinho -->
-        <ul class="navbar-nav ml-auto ml-md-0">
+<ul class="navbar-nav ml-auto ml-md-0">
             <li class="nav-item dropdown">
-            <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i></a>
+                <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i> <span class="mammamiaCart_total"></span></a>
+                <div class="mammamiaStore_container"></div>
+        <div class="mammamiaStore_cart_container"></div>
                 </li>
         </ul>
+        </div>
     </nav>
     <!-- Menu -->
     <div id="layoutSidenav">
@@ -94,43 +97,43 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
-                   
-                </div>
-
-                <!-- Cart View -->
+                   <!-- Cart View -->
     <scripts id="cart-template" type="x-template" >
-        <div class="simpleStore_cart">
+        <div class="mammamiaStore_cart">
             <h2 align='center'>Sacola</h2>
             <a href="#" class="close">&times;</a>
 
             <div class="row">
                 <div class="eight columns">
-                    <div class="simpleCart_items"></div>
-                    <a href="javascript:;" class="simpleCart_empty u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
+                    <div class="mammamiaCart_items"></div>
+                    <a href="javascript:;" class="mammamiaCart_empty u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
                 </div>
                 <div class="four columns">
                     <div class="cart_info">
-                        <div class="cart_info_item cart_itemcount">Items:
-                            <div class="simpleCart_quantity"></div>
+                        <div class="cart_info_item cart_itemcount">Itens:
+                            <div class="mammamiaCart_quantity"></div>
                         </div>
-                        <div class="cart_info_item cart_taxrate">Tax Rate:
-                            <div class="simpleCart_taxRate"></div>
+                        <div class="cart_info_item cart_taxrate">Taxa de imposto:
+                            <div class="mammamiaCart_taxRate"></div>
                         </div>
-                        <div class="cart_info_item cart_tax">Tax:
-                            <div class="simpleCart_tax"></div>
+                        <div class="cart_info_item cart_tax">Taxa:
+                            <div class="mammamiaCart_tax"></div>
                         </div>
-                        <div class="cart_info_item cart_shipping">Shipping:
-                            <div class="simpleCart_shipping"></div>
+                        <div class="cart_info_item cart_shipping">Envio:
+                            <div class="mammamiaCart_shipping"></div>
                         </div>
                         <div class="cart_info_item cart_total"><b>Total:
-                            <div class="simpleCart_grandTotal"></div>
+                            <div class="mammamiaCart_grandTotal"></div>
                         </b></div>
-                        <a href="javascript:;" class="button button-primary simpleStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+                        <a href="javascript:;" class="button button-primary mammamiaStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </script>
+    </scripts>
+                </div>
+
+                
 
         </div>
     </div>
@@ -160,5 +163,12 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/datatables-demo.js"></script>
 </body>
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/mammamiaCart.min.js"></script>
+<script src="js/mammamiaStore.min.js"></script>
 
+<script src="js/config.js"></script>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-Br">
 
@@ -14,10 +15,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
         crossorigin="anonymous"></script>
         
+<!-- FONTE
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+<!-- ESTILOS CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/imports.min.css">
+    <link rel="stylesheet" href="css/mammamiaStore.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="sb-nav-fixed">
+<body>
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-danger">
         <a class="navbar-brand" href="index.php">Mammamia</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#dc3545"><i
@@ -46,13 +59,6 @@
                 </div>
             </li>
         </ul>
-<!-- Carrinho -->
-        <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="nav-item dropdown">
-            <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i></a>
-                </li>
-        </ul>
-
     </nav>
     <!-- Menu -->
     <div id="layoutSidenav">
@@ -88,29 +94,80 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4">Pizzas</h1>
+                    <br><h1 class="mt-4">Pizzas</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
-                    <!-- Produtos-->
-                    <img class="product-image-photo" src="pizzas/fran.jpg" width="20%" height="210"
-                        alt="Pizza de Frango com Catupiry">
-
-                    <div class="product details product-item-details">
-                        <strong class="product name product-item-name">
-                            <a>
-                                PIZZA DE FRANGO COM CATUPIRY TAMANHOS P|M|G </a>
-                        </strong>
-                        <div>
-                            <span class="price-dinheiro">
-                                <span>Pizza Tamanho G R$25,00</span>
-                            </span>
-                        </div>
-                        <button type="submit" title="Colocar no Carrinho" class="action tocart bt-list-product">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                            Comprar </button>
-                        </form>
+                    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container ">
+        <div class="row">
+        <br><a class="brand" href="#"></a>
+            <a class="button button-primary u-pull-right mammamiaStore_viewCart">
+                <i class="fa fa-shopping-cart"></i> Carrinho <span class="mammamiaCart_total"></span>
+            </a>
+        </div>
+        <div class="mammamiaStore_container"></div>
+        <div class="mammamiaStore_cart_container"></div>
+    </div>
+                   <!-- Products View -->
+                   
+    <script id="products-template" type="x-template">
+   
+    <div class="column">
+                   <div class="mammamiaCart_shelfItem">
+                <img src="" class="item_thumb"/>
+                <div class="row">
+                    <h5 class="item_name"></h5>
+                    <div class="mammamiaStore_getDetail_container">
+                        <span class="item_price"></span>
                     </div>
+                    <div class="mammamiaStore_getDetail_container">
+                        <a class="button u-pull-right mammamiaStore_getDetail">DETALHES</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </script>
+
+    <!-- Product Detail View -->
+    <script id="product-detail-template" type="x-template">
+        <div class="mammamiaCart_shelfItem mammamiaStore_detailView">
+            <a href="#" class="close view_close">&times;</a>
+
+            <div class="row">
+                <div class="four columns">
+                    <img src="" class="item_thumb"/>
+                </div>
+                <div class="eight columns">
+                    <h5 class="item_name"></h5>
+
+                    <p class="item_description"></p>
+                    <span class="item_price"></span>
+
+                    <div class="qty">
+                        <label>QUANTIDADE</label>
+                        <input type="number" value="1" min="1" step="1" class="item_Quantity">
+                    </div>
+                    <div class="mammamiaStore_options"></div>
+                    <a class="item_add button u-pull-right" href="javascript:;">Adicionar a Sacola</a>
+                </div>
+            </div>
+        </div>
+    </script>
+    
+
+    
+    <!-- Error View -->
+    <script id="error-template" type="x-template">
+        <div class="error">
+            <b>Desculpe, algo deu errado:(</b>
+			<p class="error_text"></p>
+			<a href="#" class="close alert_close">&times;</a>
+        </div>
+    </script>
                 </div>
         </div>
     </div>
@@ -140,5 +197,12 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/datatables-demo.js"></script>
 </body>
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/mammamiaCart.min.js"></script>
+<script src="js/mammamiaStore.min.js"></script>
 
+<script src="js/config.js"></script>
 </html>

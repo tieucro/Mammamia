@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('Classes/conexao.php');
+include 'banco.php';
 
 ?>
 
@@ -20,6 +20,19 @@ include('Classes/conexao.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
         crossorigin="anonymous"></script>
 
+        <!-- FONTE
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- ESTILOS CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/imports.min.css">
+    <link rel="stylesheet" href="css/mammamiaStore.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="sb-nav-fixed">

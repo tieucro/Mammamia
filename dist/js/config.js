@@ -1,8 +1,8 @@
 $(function() {
     mammamiaCart({
 
-        // array representing the format and columns of the cart, see
-        // the cart columns documentation
+        //array que representa o formato e as colunas do carrinho, consulte
+        // a documentação das colunas do carrinho
         cartColumns: [
             { attr: "name", label: "Name" },
             { attr: "price", label: "Price", view: 'currency' },
@@ -13,50 +13,50 @@ $(function() {
             { view: "remove", text: "Remove", label: false }
         ],
 
-        // "div" or "table" - builds the cart as a table or collection of divs
+        // "div" ou "table" - constrói o carrinho como uma mesa ou coleção de divs
         cartStyle: "div",
 
-        // how mammamiaCart should checkout, see the checkout reference for more info
+        // como mammamiaCart deve finalizar a compra, consulte a referência de finalização da compra para mais informações
         checkout: {
             type: "PayPal",
-            email: "you@yours.com"
+            email: "tarciano2020@gmail.com"
         },
 
-        // set the currency, see the currency reference for more info
+        // definir a moeda, consulte a referência de moeda para obter mais informações
         currency: "BRL",
 
-        // collection of arbitrary data you may want to store with the cart,
-        // such as customer info
+        //coleta de dados arbitrários que você pode querer armazenar com o carrinho,
+        // como informações do cliente
         data: {},
 
-        // set the cart langauge (may be used for checkout)
+        // definir o idioma do carrinho (pode ser usado para checkout)
         language: "portuguese-br",
 
-        // array of item fields that will not be sent to checkout
+        // matriz de campos de item que não serão enviados para checkout
         excludeFromCheckout: [
             'qty',
             'thumb'
         ],
 
-        // custom function to add shipping cost
+        // função personalizada para adicionar custo de envio
         shippingCustom: null,
 
-        // flat rate shipping option
+        // opção de envio de taxa fixa
         shippingFlatRate: 0,
 
-        // added shipping based on this value multiplied by the cart quantity
+        // frete adicionado com base neste valor multiplicado pela quantidade do carrinho
         shippingQuantityRate: 0,
 
-        // added shipping based on this value multiplied by the cart subtotal
+        // frete adicionado com base neste valor multiplicado pelo subtotal do carrinho
         shippingTotalRate: 0,
 
-        // tax rate applied to cart subtotal
+        // taxa de imposto aplicada ao subtotal do carrinho
         taxRate: 0,
 
-        // true if tax should be applied to shipping
+        // verdadeiro se o imposto deve ser aplicado ao frete
         taxShipping: false,
 
-        // event callbacks
+        //retornos de chamada de evento
         beforeAdd: null,
         afterAdd: null,
         load: null,
@@ -72,13 +72,13 @@ $(function() {
 
     mammamiaStore.init({
 
-        // brand can be text or image URL
+        // marca pode ser texto ou URL de imagem
         brand: "mammamiaStore",
 
-        // numder of products per row (accepts 1, 2 or 3)
+        // número de produtos por linha (aceita 1, 2 ou 3)
         numColumns: 3,
 
-        // name of JSON file, located in directory root
+        // nome do arquivo JSON, localizado na raiz do diretório
         JSONFile: "products.json"
 
     });

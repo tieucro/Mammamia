@@ -1,31 +1,29 @@
 {
     "products": [{
-            "name": "Pizza frango com catupiry",
-            "price": "25.99",
+            "name": "Pizza de Calabresa",
+            "price": "23.99",
             "options": [
                 { "Size": "Pequena,Média,Grande" }
             ],
-            "image": "https://pizzariamamaclara.com.br/st/image/cache/catalog/20-Gigas-Pizza-Frango-com-Catupiry-500x500.png",
+            "image": "pizzas/piz.jpg",
             "description": "This is a very awesome grey T-shirt"
         },
         {
-            "name": "Cool T-shirt",
-            "price": "15.99",
+            "name": "Pizza de Frango com Catupiry",
+            "price": "23.99",
             "options": [
-                { "Size": "Small,Medium,Large" },
-                { "Color": "Blue,Red" },
-                { "OneOfAKind": true }
+                { "Size": "Pequena,Média,Grande" }
             ],
-            "image": "http://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg",
+            "image": "pizzas/pizzfrango.jpg",
             "description": "This is a really cool blue T-shirt"
         },
         {
-            "name": "Fun T-shirt",
-            "price": "15.99",
+            "name": "Pizza de Chocolate",
+            "price": "23.99",
             "options": [
-                { "Size": "Small,Medium,Large" }
+                { "Size": "Pequena,Média,Grande" }
             ],
-            "image": "http://upload.wikimedia.org/wikipedia/commons/c/c6/Grey_Tshirt.jpg",
+            "image": "pizzas/pizzchoco.jpg",
             "description": "This is another fun grey T-shirt"
         }
     ]
