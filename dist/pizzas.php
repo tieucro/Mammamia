@@ -132,6 +132,41 @@
 
     </script>
 
+<!-- Cart View -->
+<script id="cart-template" type="x-template" >
+        <div class="mammamiaStore_cart">
+            <h2 align='center'>Sacola</h2>
+            <a href="#" class="close">&times;</a>
+
+            <div class="row">
+                <div class="eight columns">
+                    <div class="mammamiaCart_items"></div>
+                    <a href="javascript:;" class="mammamiaCart_empty u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
+                </div>
+                <div class="four columns">
+                    <div class="cart_info">
+                        <div class="cart_info_item cart_itemcount">Itens:
+                            <div class="mammamiaCart_quantity"></div>
+                        </div>
+                        <div class="cart_info_item cart_taxrate">Taxa de imposto:
+                            <div class="mammamiaCart_taxRate"></div>
+                        </div>
+                        <div class="cart_info_item cart_tax">Taxa:
+                            <div class="mammamiaCart_tax"></div>
+                        </div>
+                        <div class="cart_info_item cart_shipping">Envio:
+                            <div class="mammamiaCart_shipping"></div>
+                        </div>
+                        <div class="cart_info_item cart_total"><b>Total:
+                            <div class="mammamiaCart_grandTotal"></div>
+                        </b></div>
+                        <a href="javascript:;" class="button button-primary mammamiaStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
     <!-- Product Detail View -->
     <script id="product-detail-template" type="x-template">
         <div class="mammamiaCart_shelfItem mammamiaStore_detailView">
