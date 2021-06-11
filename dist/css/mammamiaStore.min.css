@@ -1,5 +1,3 @@
-/* simplestore | Copyright 2015 Chris Diana (https://github.com/cdmedia/simplestore) | MIT license | v1.5 */
-
 .brand,
 select {
     display: block;
@@ -278,7 +276,7 @@ p.error_text {
         width: 100%
     }
     .mammamiaCart_shelfItem {
-        position: relative;
+        position: relative
     }
     .mammamiaCart_shelfItem .item_name {
         font-size: 1.8rem
@@ -298,7 +296,7 @@ p.error_text {
         width: 100%;
         height: auto
     }
-    .mammamia_detailView .item_add {
+    .mammamiaStore_detailView .item_add {
         position: inherit;
         display: block;
         width: 100%

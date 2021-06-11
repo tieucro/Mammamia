@@ -1,0 +1,24 @@
+{
+    "products2": [{
+            "name": "Refrigerante Lata 350ml",
+            "price": "3.69",
+            "options": [
+                { "Size": "Coca,Fanta,Guaraná" }
+            ],
+            "image": "bebidas/cocalata.jpg",
+            "description": "Refrigerante Coca Cola Lata"
+        },
+        {
+            "name": "SUCO TAMPICO FRUTAS CITRICAS 2 LITROS",
+            "price": "9.98",
+            "image": "bebidas/tampico.jpg",
+            "description": "SUCO TAMPICO FRUTAS CITRICAS"
+        },
+        {
+            "name": "Energético Monster Energy 473ml",
+            "price": "7.70",
+            "image": "bebidas/energetico.jpg",
+            "description": "Energético Monster Energy "
+        }
+    ]
+}

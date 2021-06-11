@@ -8,7 +8,7 @@ select {
 
 .brand,
 a.hover,
-a.mammamiaCart_empty {
+a.mammamiaCart2_empty {
     text-decoration: none
 }
 
@@ -16,7 +16,7 @@ select {
     margin-right: 10px
 }
 
-.Mammamia {
+.mammamiaStore2 {
     margin-top: 20px
 }
 
@@ -32,7 +32,7 @@ select {
     max-height: 50px
 }
 
-.mammamiaCart_shelfItem {
+.mammamiaCart2_shelfItem {
     border: 1px solid #EFEFEF;
     padding: 25px 18px 10px;
     margin: 15px 0
@@ -43,7 +43,7 @@ select {
     border-bottom: 1px solid #E1E1E1
 }
 
-.mammamiaCart_items {
+.mammamiaCart2_items {
     display: table;
     border-collapse: collapse;
     width: 100%;
@@ -51,12 +51,12 @@ select {
     margin-bottom: 50px
 }
 
-.mammamiaCart_items div:first-child {
+.mammamiaCart2_items div:first-child {
     width: 100%
 }
 
-.mammamiaCart_decrement,
-.mammamiaCart_increment {
+.mammamiaCart2_decrement,
+.mammamiaCart2_increment {
     font-size: 18px;
     line-height: 5px;
     text-decoration: none
@@ -67,7 +67,7 @@ select {
     font-size: 20px
 }
 
-.mammamiaCart_shelfItem label {
+.mammamiaCart2_shelfItem label {
     display: block;
     float: left;
     line-height: 40px;
@@ -136,8 +136,8 @@ select {
     text-align: right
 }
 
-.Mammamia_cart,
-.Mammamia_detailView {
+.mammamiaStore2_cart,
+.mammamiaStore2_detailView {
     position: relative;
     border: 1px solid #EFEFEF
 }
@@ -150,56 +150,56 @@ select {
     display: block!important
 }
 
-.Mammamia_getDetail_container {
+.mammamiaStore2_getDetail_container {
     display: block;
     float: left;
     width: 50%;
     padding: 5px 0
 }
 
-.Mammamia_detailView {
+.mammamiaStore2_detailView {
     margin: 15px 0
 }
 
-.Mammamia_detailView.mammamiaCart_shelfItem {
+.mammamiaStore2_detailView.mammamiaCart2_shelfItem {
     padding: 26px 18px 8px
 }
 
-.Mammamia_detailView .item_add {
+.mammamiaStore2_detailView .item_add {
     margin: 0
 }
 
-.Mammamia_detailView .item_name {
+.mammamiaStore2_detailView .item_name {
     margin-bottom: 1rem
 }
 
-.Mammamia_detailView .item_price {
+.mammamiaStore2_detailView .item_price {
     display: block;
     margin-bottom: 1.5rem
 }
 
 .hidden,
-.Mammamia_cart_container {
+.mammamiaStore2_cart_container {
     display: none
 }
 
-.Mammamia_cart {
+.mammamiaStore2_cart {
     padding: 22px;
     min-height: 230px;
     margin: 15px 0
 }
 
-a.mammamiaCart_empty {
+a.mammamiaCart2_empty {
     color: #CDCDCD;
     text-transform: uppercase;
     font-size: 14px
 }
 
-a.mammamiaCart_empty:hover {
+a.mammamiaCart2_empty:hover {
     color: #777
 }
 
-.mammamiaCart_checkout {
+.mammamiaCart2_checkout {
     margin: 12px 0 0
 }
 
@@ -274,16 +274,16 @@ p.error_text {
 }
 
 @media (max-width:920px) {
-    .Mammamia_getDetail_container {
+    .mammamiaStore2_getDetail_container {
         width: 100%
     }
-    .mammamiaCart_shelfItem {
-        position: relative
+    .mammamiaCart2_shelfItem {
+        position: relative;
     }
-    .mammamiaCart_shelfItem .item_name {
+    .mammamiaCart2_shelfItem .item_name {
         font-size: 1.8rem
     }
-    .Mammamia_getDetail {
+    .mammamiaStore2_getDetail {
         position: inherit;
         display: block;
         width: 100%;
@@ -292,13 +292,13 @@ p.error_text {
 }
 
 @media (max-width:620px) {
-    .Mammamia_detailView .item_thumb {
+    .mammamiaStore2_detailView .item_thumb {
         margin-bottom: 10px;
         display: block;
         width: 100%;
         height: auto
     }
-    .Mammamia_detailView .item_add {
+    .mammamiaStore2_detailView .item_add {
         position: inherit;
         display: block;
         width: 100%
@@ -310,10 +310,10 @@ p.error_text {
         text-align: left;
         border-top: 1px solid #E1E1E1
     }
-    .mammamiaCart_checkout {
+    .mammamiaCart2_checkout {
         width: 100%
     }
-    .mammamiaCart_items {
+    .mammamiaCart2_items {
         font-size: 12px
     }
     .item-decrement,

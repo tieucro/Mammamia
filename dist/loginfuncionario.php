@@ -43,7 +43,7 @@ include 'banco.php';
 
 
                                 <div class="card-body">
-                                    <form role="form" name="form_funcionarios" method="POST" action="conexao.php">
+                                    <form role="form" name="form_funcionarios" method="POST" action="log_funcionario.php">
                                         <div class="form-group">
                                             <label class="small mb-1" for="cpf">CPF</label>
                                             <input class="form-control py-4" id="cpf" type="text"

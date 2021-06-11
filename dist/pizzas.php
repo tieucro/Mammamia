@@ -98,7 +98,7 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
-                    <!-- Primary Page Layout
+                    <!-- Layout da página primária
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container ">
         <div class="row">
@@ -110,7 +110,7 @@
         <div class="mammamiaStore_container"></div>
         <div class="mammamiaStore_cart_container"></div>
     </div>
-                   <!-- Products View -->
+                   <!-- Visualização de produtos -->
                    
     <script id="products-template" type="x-template">
    
@@ -132,7 +132,7 @@
 
     </script>
 
-<!-- Cart View -->
+<!-- Carrinho -->
 <script id="cart-template" type="x-template" >
         <div class="mammamiaStore_cart">
             <h2 align='center'>Sacola</h2>
@@ -141,7 +141,7 @@
             <div class="row">
                 <div class="eight columns">
                     <div class="mammamiaCart_items"></div>
-                    <a href="javascript:;" class="mammamiaCart_empty u-pull-left">Empty Cart <i class="fa fa-trash-o"></i></a>
+                    <a href="javascript:;" class="mammamiaCart_empty u-pull-left">LIMPAR CARRINHO <i class="fa fa-trash-o"></i></a>
                 </div>
                 <div class="four columns">
                     <div class="cart_info">
@@ -159,8 +159,8 @@
                         </div>
                         <div class="cart_info_item cart_total"><b>Total:
                             <div class="mammamiaCart_grandTotal"></div>
-                        </b></div>
-                        <a href="javascript:;" class="button button-primary mammamiaStore_checkout u-pull-right">Checkout <i class="fa fa-arrow-right"></i></a>
+                       </div>
+                        <a href="javascript:;" class="button button-primary mammamiaStore_checkout u-pull-right">Comprar<i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -238,6 +238,6 @@
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="js/mammamiaCart.min.js"></script>
 <script src="js/mammamiaStore.min.js"></script>
-
+<script src="js/scripts.js"></script>
 <script src="js/config.js"></script>
 </html>

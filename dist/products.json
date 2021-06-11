@@ -6,7 +6,7 @@
                 { "Size": "Pequena,Média,Grande" }
             ],
             "image": "pizzas/piz.jpg",
-            "description": "This is a very awesome grey T-shirt"
+            "description": "Molho, calabresa, cebola e orégano."
         },
         {
             "name": "Pizza de Frango com Catupiry",
@@ -15,16 +15,16 @@
                 { "Size": "Pequena,Média,Grande" }
             ],
             "image": "pizzas/pizzfrango.jpg",
-            "description": "This is a really cool blue T-shirt"
+            "description": "Catupiry e frango."
         },
         {
-            "name": "Pizza de Chocolate",
+            "name": "Pizza de Brigadeiro",
             "price": "R$ 23.99",
             "options": [
                 { "Size": "Pequena,Média,Grande" }
             ],
             "image": "pizzas/pizzchoco.jpg",
-            "description": "This is another fun grey T-shirt"
+            "description": "Chocolate e granulado."
         }
     ]
 }

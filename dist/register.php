@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-include('banco.php');
+include 'banco.php';
 
 ?>
 <html lang="pt-br">
@@ -66,57 +66,57 @@ include('banco.php');
                                         <div class="form-group">
                                             <label class="small mb-1" for="cpf">CPF</label>
                                             <input class="form-control py-4" id="cpf" name="cpf" type="text"
-                                                aria-describedby="cpfHelp" placeholder="Ensirir CPF"
+                                                aria-describedby="cpfHelp" placeholder="Insira seu CPF"
                                                 autocomplete="off" maxlength="14" onkeyup="mascara_cpf()" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="endereco">Endereço</label>
                                             <input class="form-control py-4" id="endereco" name="endereco" type="text"
-                                                aria-describedby="endereco" placeholder="Ensira seu Endereço" maxlength="32" required/>
+                                                aria-describedby="endereco" placeholder="Insira seu Endereço" maxlength="32" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="bairro">Bairro</label>
                                             <input class="form-control py-4" id="bairro" name="bairro" type="text"
-                                                aria-describedby="bairro" placeholder="Ensira seu Bairro" maxlength="32" required/>
+                                                aria-describedby="bairro" placeholder="Insira seu Bairro" maxlength="32" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cep">CEP</label>
                                             <input class="form-control py-4" id="cep" name="cep" type="text"
-                                                aria-describedby="cep" placeholder="Ensira seu Cep" autocomplete="off" maxlength="9" onkeyup="mascara_cep()" required/>
+                                                aria-describedby="cep" placeholder="Insira seu Cep" autocomplete="off" maxlength="9" onkeyup="mascara_cep()" required/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="numero">Numero da Residencia</label>
                                             <input class="form-control py-4" id="numero" name="numero" type="text"
                                                 aria-describedby="endereço"
-                                                placeholder="Ensira o numero da residência" maxlength="8" required/>
+                                                placeholder="Insira o numero da residência" maxlength="8" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="estado">Estado</label>
                                             <input class="form-control py-4" id="estado" name="estado" type="text"
-                                                aria-describedby="estado" placeholder="Ensira seu Estado"
+                                                aria-describedby="estado" placeholder="Insira seu Estado"
                                                 maxlength="2" required/>
                                         </div>
                                         <div class="col-md-6"></div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="cidade">Cidade</label>
                                             <input class="form-control py-4" id="cidade"  name="cidade" type="text"
-                                                aria-describedby="cidade" placeholder="Ensira sua Cidade" maxlength="20" required/>
+                                                aria-describedby="cidade" placeholder="Insira sua Cidade" maxlength="20" required/>
                                         </div>
                                         <div class="form-group">
                                             <label class="small mb-1" for="email">Email</label>
                                             <input class="form-control py-4" id="email" name="email" type="email"
-                                                aria-describedby="email" placeholder="Ensira seu Email" maxlength="32" required/>
+                                                aria-describedby="email" placeholder="Insira seu Email" maxlength="32" required/>
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="small mb-1" for="senha">Senha</label>
                                                     <input class="form-control py-4" id="senha" name="senha" type="password"
-                                                        placeholder="Ensira sua Senha" maxlength="15" required/>
+                                                        placeholder="Insira sua Senha" maxlength="15" required/>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

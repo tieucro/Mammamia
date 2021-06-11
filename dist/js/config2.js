@@ -1,5 +1,5 @@
 $(function() {
-    mammamiaCart({
+    mammamiaCart2({
 
         //array que representa o formato e as colunas do carrinho, consulte
         // a documentação das colunas do carrinho
@@ -14,12 +14,12 @@ $(function() {
         ],
 
         // "div" ou "table" - constrói o carrinho como uma mesa ou coleção de divs
-        cartStyle: "div",
+        cartStyle: "table",
 
         // como mammamiaCart deve finalizar a compra, consulte a referência de finalização da compra para mais informações
         checkout: {
             type: "PayPal",
-            email: "you@yours.com"
+            email: "tarciano2020@gmail.com"
         },
 
         // definir a moeda, consulte a referência de moeda para obter mais informações
@@ -70,16 +70,16 @@ $(function() {
 
     });
 
-    mammamiaStore.init({
+    mammamiaStore2.init({
 
         // marca pode ser texto ou URL de imagem
-        brand: "Mammamia",
+        brand: "mammamiaStore2",
 
         // número de produtos por linha (aceita 1, 2 ou 3)
         numColumns: 3,
 
         // nome do arquivo JSON, localizado na raiz do diretório
-        JSONFile: "js/products.json"
+        JSONFile: "products2.json"
 
     });
 

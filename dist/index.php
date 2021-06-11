@@ -64,12 +64,6 @@ include 'banco.php';
                 </div>
             </li>
         </ul>
-<!-- Carrinho -->
-        <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="nav-item dropdown">
-            <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i></a>
-                </li>
-        </ul>
     </nav>
     <!-- Menu -->
     <div id="layoutSidenav">
@@ -109,7 +103,52 @@ include 'banco.php';
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
-                   
+                     <!-- Layout da página primária
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container " >
+        <div class="row">
+        <br><a class="" href="#"></a>
+            <a class="button button-primary u-pull-right mammamiaStore_viewCart"> 
+                <i class="fa fa-shopping-cart"></i> Carrinho <span class="mammamiaCart_total"></span>
+            </a>
+        </div>
+        <div class="mammamiaStore_container"></div>
+        <div class="mammamiaStore_cart_container"></div>
+    </div>
+    <!-- Carrinho -->
+<script id="cart-template" type="x-template" >
+        <div class="mammamiaStore_cart">
+            <h2 align='center'>Sacola</h2>
+            <a href="#" class="close">&times;</a>
+
+            <div class="row">
+                <div class="eight columns">
+                    <div class="mammamiaCart_items"></div>
+                    <a href="javascript:;" class="mammamiaCart_empty u-pull-left">LIMPAR CARRINHO <i class="fa fa-trash-o"></i></a>
+                </div>
+                <div class="four columns">
+                    <div class="cart_info">
+                        <div class="cart_info_item cart_itemcount">Itens:
+                            <div class="mammamiaCart_quantity"></div>
+                        </div>
+                        <div class="cart_info_item cart_taxrate">Taxa de imposto:
+                            <div class="mammamiaCart_taxRate"></div>
+                        </div>
+                        <div class="cart_info_item cart_tax">Taxa:
+                            <div class="mammamiaCart_tax"></div>
+                        </div>
+                        <div class="cart_info_item cart_shipping">Envio:
+                            <div class="mammamiaCart_shipping"></div>
+                        </div>
+                        <div class="cart_info_item cart_total"><b>Total:
+                            <div class="mammamiaCart_grandTotal"></div>
+                       </div>
+                        <a href="javascript:;" class="button button-primary mammamiaStore_checkout u-pull-right">Comprar<i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
                 </div>
         </div>
     </div>
@@ -139,5 +178,12 @@ include 'banco.php';
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/datatables-demo.js"></script>
 </body>
+<!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/mammamiaCart.min.js"></script>
+<script src="js/mammamiaStore.min.js"></script>
 
+<script src="js/config.js"></script>
 </html>
