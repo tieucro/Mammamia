@@ -78,6 +78,7 @@ $(function() {
         // número de produtos por linha (aceita 1, 2 ou 3)
         numColumns: 3,
 
+
         // nome do arquivo JSON, localizado na raiz do diretório
         JSONFile: "products.json"
 
