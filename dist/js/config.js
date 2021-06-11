@@ -79,7 +79,7 @@ $(function() {
         numColumns: 3,
 
         // nome do arquivo JSON, localizado na raiz do diretório
-        JSONFile: "js/products.json"
+        JSONFile: "products.json"
 
     });
 
