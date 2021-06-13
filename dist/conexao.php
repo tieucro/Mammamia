@@ -13,14 +13,16 @@ try {
 } catch(PDOException $e) {
   echo "A conexão falhou: " . $e->getMessage();
 }
+class Usuario{ 
 
- function logar($email, $senha){
+
+ public function logar($email, $senha){
 
   global $pdo;
   //verificar se o email e senha estao cadastrados, se sim
   $sql = $pdo->prepare("SELECT id FROM usuarios WHERE email = :email AND senha = :senha");
   $sql->bindValue(":email",$email);
-  $sql->bindValue(":senha",$senha);
+  $sql->bindValue(":senha",md5($senha));
   $sql->execute();
   if($sql->rowCount() > 0)
 {
@@ -34,6 +36,7 @@ else
 
 {
   return false;//nao foi possivel logar
+}
 }
 }
 header('Location: index.php');

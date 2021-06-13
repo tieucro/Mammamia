@@ -14,12 +14,24 @@ include 'banco.php';
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>OpenRoad</title>
-    <link href="css/styles.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
         crossorigin="anonymous"></script>
 
+        <!-- FONTE
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- ESTILOS CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/imports.min.css">
+    <link rel="stylesheet" href="css/mammamiaStore.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="sb-nav-fixed">
@@ -43,19 +55,10 @@ include 'banco.php';
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Configuração</a>
-                    <a class="dropdown-item" href="#">Registro de atividade</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="login.php">Logout</a>
+                    <a class="dropdown-item" href="loginfuncionario.php">Logout</a>
                     
                 </div>
             </li>
-        </ul>
-<!-- Carrinho -->
-        <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="nav-item dropdown">
-            <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i></a>
-                </li>
         </ul>
     </nav>
     <!-- Menu -->
