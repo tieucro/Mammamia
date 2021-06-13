@@ -1,5 +1,5 @@
 $(function() {
-    mammamiaCart2({
+    mammamiaCarts({
 
         //array que representa o formato e as colunas do carrinho, consulte
         // a documentação das colunas do carrinho
@@ -70,10 +70,10 @@ $(function() {
 
     });
 
-    mammamiaStore2.init({
+    mammamiaStores.init({
 
         // marca pode ser texto ou URL de imagem
-        brand: "mammamiaStore2",
+        brand: "mammamiaStores",
 
         // número de produtos por linha (aceita 1, 2 ou 3)
         numColumns: 3,

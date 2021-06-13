@@ -5,19 +5,19 @@
             "options": [
                 { "Size": "Coca,Fanta,Guaraná" }
             ],
-            "image": "bebidas/cocalata.jpg",
+            "image": "pizzas/cocalata.jpg",
             "description": "Refrigerante Coca Cola Lata"
         },
         {
             "name": "SUCO TAMPICO FRUTAS CITRICAS 2 LITROS",
             "price": "9.98",
-            "image": "bebidas/tampico.jpg",
+            "image": "pizzas/tampico.jpg",
             "description": "SUCO TAMPICO FRUTAS CITRICAS"
         },
         {
             "name": "Energético Monster Energy 473ml",
             "price": "7.70",
-            "image": "bebidas/energetico.jpg",
+            "image": "pizzas/energetico.jpg",
             "description": "Energético Monster Energy "
         }
     ]

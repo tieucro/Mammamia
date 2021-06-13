@@ -20,7 +20,7 @@
 <!-- ESTILOS CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/imports.min.css">
-    <link rel="stylesheet" href="css/mammamiaStore2.min.css">
+    <link rel="stylesheet" href="css/mammamiaStores.min.css">
     <link href="css/styles.css" rel="stylesheet" />
 
     <!-- Mobile Specific Metas
@@ -50,9 +50,6 @@
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Configuração</a>
-                    <a class="dropdown-item" href="#">Registro de atividade</a>
-                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="login.php">Logout</a>
                     
                 </div>
@@ -104,27 +101,27 @@
     <div class="container ">
         <div class="row">
         <br><a class="" href="#"></a>
-            <a class="button button-primary u-pull-right mammamiaStore2_viewCart">
-                <i class="fa fa-shopping-cart"></i> Carrinho <span class="mammamiaCart2_total"></span>
+            <a class="button button-primary u-pull-right mammamiaStores_viewCart">
+                <i class="fa fa-shopping-cart"></i> Carrinho <span class="mammamiaCarts_total"></span>
             </a>
         </div>
-        <div class="mammamiaStore2_container"></div>
-        <div class="mammamiaStore2_cart_container"></div>
+        <div class="mammamiaStores_container"></div>
+        <div class="mammamiaStores_cart_container"></div>
     </div>
                    <!-- Visualização de produtos -->
                    
     <script id="products-template" type="x-template">
    
     <div class="column">
-                   <div class="mammamiaCart2_shelfItem">
+                   <div class="mammamiaCarts_shelfItem">
                 <img src="" class="item_thumb"/>
                 <div class="row">
                     <h5 class="item_name"></h5>
-                    <div class="mammamiaStore2_getDetail_container">
+                    <div class="mammamiaStores_getDetail_container">
                         <span class="item_price"></span>
                     </div>
-                    <div class="mammamiaStore2_getDetail_container">
-                        <a class="button u-pull-right mammamiaStore2_getDetail">DETALHES</a>
+                    <div class="mammamiaStores_getDetail_container">
+                        <a class="button u-pull-right mammamiaStores_getDetail">DETALHES</a>
                     </div>
                 </div>
 
@@ -135,33 +132,33 @@
 
 <!-- Carrinho -->
 <script id="cart-template" type="x-template" >
-        <div class="mammamiaStore2_cart">
+        <div class="mammamiaStores_cart">
             <h2 align='center'>Sacola</h2>
             <a href="#" class="close">&times;</a>
 
             <div class="row">
                 <div class="eight columns">
-                    <div class="mammamiaCart2_items"></div>
-                    <a href="javascript:;" class="mammamiaCart2_empty u-pull-left">LIMPAR CARRINHO <i class="fa fa-trash-o"></i></a>
+                    <div class="mammamiaCarts_items"></div>
+                    <a href="javascript:;" class="mammamiaCarts_empty u-pull-left">LIMPAR CARRINHO <i class="fa fa-trash-o"></i></a>
                 </div>
                 <div class="four columns">
                     <div class="cart_info">
                         <div class="cart_info_item cart_itemcount">Itens:
-                            <div class="mammamiaCart2_quantity"></div>
+                            <div class="mammamiaCarts_quantity"></div>
                         </div>
                         <div class="cart_info_item cart_taxrate">Taxa de imposto:
-                            <div class="mammamiaCart2_taxRate"></div>
+                            <div class="mammamiaCarts_taxRate"></div>
                         </div>
                         <div class="cart_info_item cart_tax">Taxa:
-                            <div class="mammamiaCart2_tax"></div>
+                            <div class="mammamiaCarts_tax"></div>
                         </div>
                         <div class="cart_info_item cart_shipping">Envio:
-                            <div class="mammamiaCart2_shipping"></div>
+                            <div class="mammamiaCarts_shipping"></div>
                         </div>
                         <div class="cart_info_item cart_total"><b>Total:
-                            <div class="mammamiaCart2_grandTotal"></div>
+                            <div class="mammamiaCarts_grandTotal"></div>
                        </div>
-                        <a href="javascript:;" class="button button-primary mammamiaStore2_checkout u-pull-right">Comprar<i class="fa fa-arrow-right"></i></a>
+                        <a href="javascript:;" class="button button-primary mammamiaStores_checkout u-pull-right">Comprar<i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -170,7 +167,7 @@
 
     <!-- Product Detail View -->
     <script id="product-detail-template" type="x-template">
-        <div class="mammamiaCart2_shelfItem mammamiaStore2_detailView">
+        <div class="mammamiaCarts_shelfItem mammamiaStores_detailView">
             <a href="#" class="close view_close">&times;</a>
 
             <div class="row">
@@ -187,7 +184,7 @@
                         <label>QUANTIDADE</label>
                         <input type="number" value="1" min="1" step="1" class="item_Quantity">
                     </div>
-                    <div class="mammamiaStore2_options"></div>
+                    <div class="mammamiaStores_options"></div>
                     <a class="item_add button u-pull-right" href="javascript:;">Adicionar a Sacola</a>
                 </div>
             </div>
@@ -238,8 +235,8 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/mammamiaCart2.min.js"></script>
-<script src="js/mammamiaStore2.min.js"></script>
+<script src="js/mammamiaCarts.min.js"></script>
+<script src="js/mammamiaStores.min.js"></script>
 
-<script src="js/config2.js"></script>
+<script src="js/configs.js"></script>
 </html>
