@@ -73,7 +73,7 @@ $(function() {
     mammamiaStores.init({
 
         // marca pode ser texto ou URL de imagem
-        brand: "mammamiaStores",
+        brand: "Mammamia",
 
         // número de produtos por linha (aceita 1, 2 ou 3)
         numColumns: 3,
