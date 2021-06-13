@@ -34,14 +34,8 @@
         <a class="navbar-brand" href="index.php">Mammamia</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#dc3545"><i
                 class="fas fa-bars"></i></button>
-        <!-- Barra de Pesquisa-->
+        
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-            <div class="input-group">
-                <input class="form-control" type="text" placeholder="Procurar por..." aria-label="Search"
-                    aria-describedby="basic-addon2" />
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
-                </div>
             </div>
         </form>
         <!-- Barra de Navegação-->
