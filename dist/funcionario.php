@@ -43,19 +43,10 @@ include 'banco.php';
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#">Configuração</a>
-                    <a class="dropdown-item" href="#">Registro de atividade</a>
-                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="loginfuncionario.php">Logout</a>
                     
                 </div>
             </li>
-        </ul>
-<!-- Carrinho -->
-        <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="nav-item dropdown">
-            <a class="nav-link" id="bagShopping" href="sacola.php" role="button"><i class="fas fa-shopping-bag"></i></a>
-                </li>
         </ul>
     </nav>
     <!-- Menu -->
@@ -80,6 +71,12 @@ include 'banco.php';
                         <a class="nav-link" href="bebidas.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-wine-bottle"></i></div>
                             Bebidas
+                        </a>
+                    </div>
+                    <div>
+                        <a class="nav-link" href="cad_produtos.php">
+                            <div class="sb-nav-link-icon"><i class="far fa-id-card"></i></div>
+                            Cadastro de Produtos
                         </a>
                     </div>
                 </div>
@@ -117,7 +114,7 @@ include 'banco.php';
 
       <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Gerênciamento de Produtos</h3>
+                <h3 class="card-title">Gerênciamento de Pizzas</h3>
                 
                 <small class="float-right"><a href="cad_produtos.php"> <button type="button" class="btn btn-block btn-primary">Adicionar Produto</button></a></small>
               </div>
@@ -206,7 +203,116 @@ include 'banco.php';
        
       </div>
       <div class="modal-body">
-        <p>Tem certeza que deseja excluir esse Produto?</p>
+        <p>Tem certeza que deseja excluir essa Pizza?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancelar</button>
+        <a class="btn btn-outline-light btn-ok">Sim! Quero excluir.</a>
+
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+                </div>
+        </div>
+        
+
+        <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Gerênciamento de Bebidas</h3>
+                
+                <small class="float-right"><a href="cad_produtos.php"> <button type="button" class="btn btn-block btn-primary">Adicionar Produto</button></a></small>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Quantidade</th>
+                    <th>Tipo</th>
+                    <th>Sabor</th>
+                    <th>preco</th>
+                    <th>Editar Dados</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+                  
+                  <?php
+                    
+                    include "banco.php";
+                   
+
+                    try {
+                    
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $stmt = $conn->prepare("SELECT * FROM bebidas");
+                    $stmt->execute();
+
+                    // set the resulting array to associative
+                    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                    foreach($stmt->fetchAll() as $k=>$v) {
+                        //echo $v;
+                        //var_dump($v);
+                        echo '<tr>';
+                        echo '<td>'.$v['id'].'</td>';
+                        echo '<td>'.$v['quantidade'].'</td>';
+                        echo '<td>'.$v['tipo'].'</td>';
+                        echo '<td>'.$v['sabor'].'</td>';
+                        echo '<td>'.$v['preco'].'</td>';
+                        echo '<td style="text-align:center"> 
+                              <a class="btn btn-primary btn-sm" href="vis_dist.php?id='.$v['id'].'"><i class="fas fa-folder"></i></a>
+                              <a class="btn btn-info btn-sm" href="edt_dist.php?id='.$v['id'].'"><i class="fas fa-pencil-alt"></i></a>                            
+                              <a class="btn btn-danger btn-sm" href="delete.php?id='.$v['id'].'" data-href="delete.php?id='.$v['id'].'" data-toggle="modal" data-target="#confirm-delete"><i class="fas fa-trash"></i></a>                                                 
+                              </td>';
+                        echo '</tr>';
+
+
+                    }
+                    } catch(PDOException $e) {
+                    echo "Error: " . $e->getMessage();
+                    }
+                    $conn = null;
+                    //echo "</table>";
+                ?>
+
+                  </tbody>                 
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+        
+
+
+
+            
+
+
+
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  
+
+
+
+<div class="modal fade" id="confirm-delete">
+  <div class="modal-dialog">
+    <div class="modal-content bg-danger">
+      <div class="modal-header">
+        <h4 class="modal-title">Confirmar Exclusão</h4>
+       
+      </div>
+      <div class="modal-body">
+        <p>Tem certeza que deseja excluir essa Bebida?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancelar</button>

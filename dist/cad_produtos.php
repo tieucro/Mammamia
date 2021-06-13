@@ -82,6 +82,12 @@ include 'banco.php';
                             Bebidas
                         </a>
                     </div>
+                    <div>
+                        <a class="nav-link" href="funcionario.php">
+                            <div class="sb-nav-link-icon"><i class="far fa-id-card"></i></div>
+                            Aréa do Funcionario
+                        </a>
+                </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
@@ -105,15 +111,15 @@ include 'banco.php';
         <!-- general form elements -->
         <div class="card card-primary">
           <div class="card-header">
-            <h3 class="card-title">Cadastro de Produto</h3>
+            <h3 class="card-title">Cadastro de Pizza</h3>
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form role="form" name="form_usuario" method="POST" action="funcionario.php" >
+          <form role="form" name="form_usuario" method="POST" action="cad_pizzas.php" >
             <div class="card-body">
               <div class="form-group">
                 <label for="nome"><P>Quantidade</P></label>
-                <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Escolha a quantidade de pizza a ser registrada" required>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Escolha a quantidade de pizza para ser registrada" required>
               </div>
               <div class="form-group">
                 <label for="tipo">Tipo de Pizza</label>
@@ -126,6 +132,47 @@ include 'banco.php';
               <div class="form-group">
                 <label for="preco">Preço da Pizza</label>
                 <input type="text" class="form-control" id="preco" name="preco" placeholder="Digite o Preço da Pizza" required>
+              </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+       
+        </div>
+    </div>
+
+<br>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+    
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Cadastro de Bebidas</h3>
+          </div>
+          <!-- /.card-header -->
+          <!-- form start -->
+          <form role="form" name="form_usuario" method="POST" action="cad_bebidas.php" >
+            <div class="card-body">
+              <div class="form-group">
+                <label for="nome"><P>Quantidade</P></label>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Escolha a quantidade de bebida para ser registrada" required>
+              </div>
+              <div class="form-group">
+                <label for="tipo">Tipo de Bebida</label>
+                <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Digite o tipo de bebida. Ex:Suco" required>
+              </div>
+              <div class="form-group">
+                <label for="sabor">Sabor da Bebida</label>
+                <input type="text" class="form-control" id="sabor" name="sabor" placeholder="Digite o sabor da bebida" required>
+              </div>
+              <div class="form-group">
+                <label for="preco">Preço da Bebida</label>
+                <input type="text" class="form-control" id="preco" name="preco" placeholder="Digite o Preço da Bebida" required>
               </div>
             </div>
             <!-- /.card-body -->

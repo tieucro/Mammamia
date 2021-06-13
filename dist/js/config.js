@@ -19,7 +19,7 @@ $(function() {
         // como mammamiaCart deve finalizar a compra, consulte a referência de finalização da compra para mais informações
         checkout: {
             type: "PayPal",
-            email: "you@yours.com"
+            email: "tarciano2020@gmail.com"
         },
 
         // definir a moeda, consulte a referência de moeda para obter mais informações
