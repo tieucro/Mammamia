@@ -1,8 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "admin";
-$dbname = "mammamia";
+//Conexão com bando de dados
+
+   //$servername = "sql204.epizy.com";
+  //$username   = "epiz_28866001";
+   //$password   = "5njYlLm7m1x";
+   //$db         = "epiz_28866001_mammamia";
+
+
+   $servername = "localhost";
+   $username = "root";
+   $password = "admin";
+   $dbname = "mammamia";
+   
 
 // Criar conexão
 try {

@@ -94,12 +94,16 @@ include 'banco.php';
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Mamamiaa</li>
                     </ol>
-                     <!-- Layout da página primária
+    <center>
+    <img src='pizzas/pizzart.png' width='1000px' height='400px'>
+    </center>
+      <!-- Layout da página primária
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <br>
     <div class="container " >
         <div class="row">
         <br><a class="" href="#"></a>
-            <a class="button button-primary u-pull-right mammamiaStore_viewCart"> 
+            <a class="button button-primary u-pull-right mammamiaStore_viewCart" > 
                 <i class="fa fa-shopping-cart"></i> Carrinho <span class="mammamiaCart_total"></span>
             </a>
         </div>
@@ -108,6 +112,7 @@ include 'banco.php';
     </div>
     <!-- Carrinho -->
 <script id="cart-template" type="x-template" >
+
         <div class="mammamiaStore_cart">
             <h2 align='center'>Sacola</h2>
             <a href="#" class="close">&times;</a>
@@ -140,22 +145,11 @@ include 'banco.php';
             </div>
         </div>
     </script>
+    
                 </div>
         </div>
     </div>
     </main>
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                <div>
-                    <a href="#">Privacidade e Politica</a>
-                    &middot;
-                    <a href="#">Termos &amp; Condições</a>
-                </div>
-            </div>
-        </div>
-    </footer>
     </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>

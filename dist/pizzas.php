@@ -1,4 +1,8 @@
+<?php
+session_start();
+include 'banco.php';
 
+?>
 <!DOCTYPE html>
 <html lang="pt-Br">
 
